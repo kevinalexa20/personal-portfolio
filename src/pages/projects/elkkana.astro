@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
+import Header from '~/components/widgets/Header.astro';
 
 const metadata = {
   title: 'Elkkana Corp - Ship Crewing Agency Platform | Kev Portfolio',
@@ -10,6 +11,28 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: '/#about' },
+        { text: 'Resume', href: '/#resume' },
+        { text: 'Portfolio', href: '/#portfolio' },
+        // { text: 'Blog', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/kevinalexa20' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
   <div class="mx-auto max-w-6xl px-4 py-16 md:px-8">
     <!-- Back Button -->
     <div class="mb-8">
@@ -100,10 +123,10 @@ const metadata = {
             crew member data, application tracking, and maritime document handling became increasingly inefficient.
           </p>
           <p>
-            I transformed their static site into a dynamic, secure, and comprehensively tested crew management portal.
-            This project showcases not only full-stack development capabilities but also <strong
-              >professional-grade testing implementation</strong
-            > that ensures production-ready quality and zero-bug deployment.
+            I transformed their static site into a dynamic, secure, and thoroughly tested crew management portal. This
+            project showcases full-stack development capabilities with <strong
+              >systematic testing implementation following industry best practices</strong
+            >, demonstrating my commitment to delivering reliable, production-ready code.
           </p>
         </div>
       </section>
@@ -175,8 +198,8 @@ const metadata = {
 
         <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
           <p class="text-sm text-blue-700 dark:text-blue-300">
-            <strong>Testing Framework:</strong> Vitest + Vue Test Utils with advanced mocking strategies, AAA pattern implementation,
-            and professional test organization ensuring zero production bugs.
+            <strong>Self-Directed Learning:</strong> Implemented comprehensive testing using Vitest + Vue Test Utils, following
+            Vue.js community best practices and industry-standard patterns to ensure code reliability.
           </p>
         </div>
       </section>
@@ -323,7 +346,7 @@ const metadata = {
             <ul class="space-y-2 text-gray-700 dark:text-gray-300">
               <li>• Vitest (Testing Framework)</li>
               <li>• Vue Test Utils (Component Testing)</li>
-              <li>• Advanced Mocking Strategies</li>
+              <li>• Learning industry best practices</li>
               <li>• Mock Services & API Layer</li>
               <li>• Edge Case Coverage</li>
               <li>• AAA Pattern Implementation</li>
@@ -457,6 +480,11 @@ const metadata = {
             professional, tested, and maintainable codebase. This project demonstrates my ability to deliver
             <strong>production-ready solutions</strong> for small businesses while implementing industry-standard testing
             practices.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            <strong>Key Learning Achievement:</strong> Successfully implemented comprehensive testing strategies with 35+
+            tests covering multiple layers, demonstrating self-directed learning and commitment to code quality that exceeds
+            typical first-project expectations.
           </p>
           <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
             <strong>Key Technical Achievement:</strong> Successfully deployed a fully-tested Vue.js application with 35+
