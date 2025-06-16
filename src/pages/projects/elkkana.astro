@@ -1,0 +1,494 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Elkkana Corp - Ship Crewing Agency Platform | Kev Portfolio',
+  description:
+    'Interactive crew management portal transformation using Vue.js and Appwrite with comprehensive testing implementation',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-8">
+    <!-- Back Button -->
+    <div class="mb-8">
+      <a href="/#portfolio" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+        <Icon name="tabler:arrow-left" class="w-5 h-5 mr-2" />
+        Back to Portfolio
+      </a>
+    </div>
+
+    <!-- Project Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Elkkana Corp: Interactive Crew Management Portal with Quality Assurance
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Client</h3>
+          <p class="text-gray-600 dark:text-gray-300">Elkkana Corp (Ship Crewing Agency)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">My Role</h3>
+          <p class="text-gray-600 dark:text-gray-300">Full-Stack Developer & QA Engineer</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Duration</h3>
+          <p class="text-gray-600 dark:text-gray-300">November 2023 - May 2024 & April - May 2025</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Tech Stack</h3>
+          <p class="text-gray-600 dark:text-gray-300">Vue.js & Appwrite</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Testing Coverage</h3>
+          <p class="text-gray-600 dark:text-gray-300">35+ tests (90%+ coverage)</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a
+          href="https://trieka-elkkana-corp.com"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          <Icon name="tabler:external-link" class="w-5 h-5 mr-2" />
+          Live Demo
+        </a>
+        <a
+          href="https://github.com/kevinalexa20/elkkana-vue.git"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+          <Icon name="tabler:brand-github" class="w-5 h-5 mr-2" />
+          GitHub Repository
+        </a>
+        <a
+          href="https://syd.cloud.appwrite.io/v1/storage/buckets/683d53aa000e3272f7df/files/683d54290011ed7175f2/view?project=6837df42003720ff8f2d&mode=admin"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <Icon name="tabler:video" class="w-5 h-5 mr-2" />
+          Video Walkthrough
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Image -->
+    <div class="mb-12">
+      <img
+        src="https://syd.cloud.appwrite.io/v1/storage/buckets/683d53aa000e3272f7df/files/683d544b000e1e1569a3/view?project=6837df42003720ff8f2d&mode=admin"
+        alt="Elkkana Corp Platform Screenshot"
+        class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+      />
+    </div>
+
+    <!-- Content Sections -->
+    <div class="prose prose-lg max-w-none dark:prose-invert">
+      <!-- Project Overview -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Project Overview & Business Context
+        </h2>
+        <div class="text-gray-700 dark:text-gray-300 space-y-4">
+          <p>
+            Elkkana Corp, a small ship crewing agency processing approximately <strong
+              >5-10 crew applications daily</strong
+            >
+            (around 50 monthly applicants), initially launched with a static company profile website built with Astro.js
+            and Tailwind CSS to establish their online presence. As operational needs evolved, the manual processes for managing
+            crew member data, application tracking, and maritime document handling became increasingly inefficient.
+          </p>
+          <p>
+            I transformed their static site into a dynamic, secure, and comprehensively tested crew management portal.
+            This project showcases not only full-stack development capabilities but also <strong
+              >professional-grade testing implementation</strong
+            > that ensures production-ready quality and zero-bug deployment.
+          </p>
+        </div>
+      </section>
+
+      <!-- Testing Implementation Highlight -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          🧪 Testing & Quality Assurance Implementation
+        </h2>
+
+        <div
+          class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-8 rounded-lg mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-3xl font-bold text-green-600 dark:text-green-400">35+</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Professional Tests</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">90%+</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Code Coverage</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">3</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Testing Layers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <Icon name="tabler:test-pipe" class="w-8 h-8 text-green-600 mr-3" />
+              <h3 class="font-semibold text-gray-900 dark:text-white">Unit Testing</h3>
+            </div>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+              <li>• 16+ form validation rule tests</li>
+              <li>• Edge cases (null, undefined, whitespace)</li>
+              <li>• Factory pattern testing for dynamic rules</li>
+              <li>• Business logic validation (email, password)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <Icon name="tabler:components" class="w-8 h-8 text-blue-600 mr-3" />
+              <h3 class="font-semibold text-gray-900 dark:text-white">Component Testing</h3>
+            </div>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+              <li>• 20+ Vue component tests</li>
+              <li>• User interaction simulation (file upload, clicks)</li>
+              <li>• Props & events verification</li>
+              <li>• Error state handling</li>
+            </ul>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <Icon name="tabler:git-merge" class="w-8 h-8 text-purple-600 mr-3" />
+              <h3 class="font-semibold text-gray-900 dark:text-white">Integration Testing</h3>
+            </div>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
+              <li>• Complete form validation workflows</li>
+              <li>• Service layer integration with mocking</li>
+              <li>• Component lifecycle testing</li>
+              <li>• End-to-end user scenarios</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+          <p class="text-sm text-blue-700 dark:text-blue-300">
+            <strong>Testing Framework:</strong> Vitest + Vue Test Utils with advanced mocking strategies, AAA pattern implementation,
+            and professional test organization ensuring zero production bugs.
+          </p>
+        </div>
+      </section>
+
+      <!-- My Role & Contributions -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">My Role & Key Contributions</h2>
+        <div class="text-gray-700 dark:text-gray-300 mb-6">
+          <p>
+            As the sole developer and QA engineer, I handled end-to-end development with a focus on <strong
+              >production-ready quality through comprehensive testing</strong
+            >. My contributions demonstrate professional-grade development practices:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:shield-check" class="w-8 h-8 text-blue-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Secure Authentication System</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Built robust authentication with Appwrite including comprehensive testing for edge cases, error
+                  scenarios, and user interaction flows using advanced composable patterns.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:user-cog" class="w-8 h-8 text-green-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+                  Profile Management with Form Validation
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Designed intuitive dashboard with factory-pattern form validation system, comprehensive error
+                  handling, and progress tracking tested across all user scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:file-upload" class="w-8 h-8 text-purple-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Advanced Document Management System</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Implemented sophisticated file management supporting 15+ document types with size validation, format
+                  checking, and comprehensive upload testing scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:timeline" class="w-8 h-8 text-orange-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Application Timeline & Status Tracking</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Developed clear visual timeline with 8 status stages, real-time updates, and state management tested
+                  through complete user application workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:bug" class="w-8 h-8 text-red-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Error Handling & Boundary Management</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Implemented comprehensive error handling system with user-friendly error boundaries, graceful
+                  fallbacks, and extensive error scenario testing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:test-pipe" class="w-8 h-8 text-indigo-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Quality Assurance Implementation</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Established comprehensive testing suite following industry standards with mock services, integration
+                  testing, and production-ready quality assurance practices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Stack -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Technology Stack & Testing Framework
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="tabler:browser" class="w-6 h-6 mr-2" />
+              Frontend & State Management
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• Vue 3 (Composition API)</li>
+              <li>• Vue Router (SPA Navigation)</li>
+              <li>• Pinia (Reactive State Management)</li>
+              <li>• Tailwind CSS + DaisyUI</li>
+              <li>• TypeScript (Type Safety)</li>
+              <li>• Advanced Composables Pattern</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="tabler:server" class="w-6 h-6 mr-2" />
+              Backend (BaaS) & Services
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• Appwrite Authentication</li>
+              <li>• Appwrite Databases/Collections</li>
+              <li>• Appwrite File Storage</li>
+              <li>• Service Layer Architecture</li>
+              <li>• Profile & Application Management</li>
+              <li>• Document Configuration System</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="tabler:test-pipe" class="w-6 h-6 mr-2" />
+              Testing & Quality Assurance
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• Vitest (Testing Framework)</li>
+              <li>• Vue Test Utils (Component Testing)</li>
+              <li>• Advanced Mocking Strategies</li>
+              <li>• Mock Services & API Layer</li>
+              <li>• Edge Case Coverage</li>
+              <li>• AAA Pattern Implementation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            <strong>Development Approach:</strong> Test-driven development with comprehensive coverage ensuring zero production
+            bugs and maintainable codebase. Initial MVP was built with Astro.js and Tailwind CSS.
+          </p>
+        </div>
+      </section>
+
+      <!-- Advanced Features & Technical Implementation -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Advanced Features & Technical Implementation
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:forms" class="w-8 h-8 text-blue-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Dynamic Form Validation Framework</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Built custom composable-based validation system with factory pattern supporting email, password,
+                  minLength, maxLength rules with comprehensive testing for all scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:progress" class="w-8 h-8 text-green-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Profile Completion Tracking</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Implemented smart progress tracking system with percentage calculation, completion indicators, and
+                  guided user experience for profile optimization.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:file-check" class="w-8 h-8 text-purple-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Sophisticated Document Management</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  15+ document types with categorization, size validation (5MB limit), format checking, preview system,
+                  and comprehensive upload/delete lifecycle management.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:refresh" class="w-8 h-8 text-orange-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Real-time Status Management</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  8-stage application timeline with real-time updates, status synchronization, and seamless user
+                  experience across multiple sessions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Business Impact & Metrics -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Business Impact & Real-World Results
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Operational Efficiency</h3>
+            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+              <li class="flex items-center">
+                <Icon name="tabler:clock-hour-9" class="w-5 h-5 text-green-600 mr-2" />
+                <span>Manual processing time reduced from hours to minutes for 5-10 daily applications</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="tabler:files" class="w-5 h-5 text-blue-600 mr-2" />
+                <span>Digital document management for 15+ maritime certificate types</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="tabler:timeline" class="w-5 h-5 text-purple-600 mr-2" />
+                <span>Real-time application status tracking with 8-stage timeline</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Technical Quality & Reliability</h3>
+            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+              <li class="flex items-center">
+                <Icon name="tabler:shield-check" class="w-5 h-5 text-green-600 mr-2" />
+                <span>Zero production bugs through 35+ comprehensive tests</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="tabler:refresh" class="w-5 h-5 text-blue-600 mr-2" />
+                <span>Maintainable codebase with 90%+ test coverage</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="tabler:users" class="w-5 h-5 text-purple-600 mr-2" />
+                <span>Professional UX optimized for small-scale maritime operations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Project Outcome & Professional Achievement
+        </h2>
+        <div
+          class="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 p-8 rounded-lg">
+          <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
+            The Elkkana Corp portal now efficiently manages their daily operations of 5-10 crew applications with a
+            professional, tested, and maintainable codebase. This project demonstrates my ability to deliver
+            <strong>production-ready solutions</strong> for small businesses while implementing industry-standard testing
+            practices.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            <strong>Key Technical Achievement:</strong> Successfully deployed a fully-tested Vue.js application with 35+
+            tests covering unit, component, and integration levels, showcasing both development and quality assurance skills
+            that exceed typical junior-to-mid-level expectations.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <strong>Business Value:</strong> Transformed manual processes into streamlined digital workflows, enabling the
+            agency to scale operations while maintaining data integrity and user experience quality through comprehensive
+            testing coverage.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Navigation to Other Projects -->
+    <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Other Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="/projects/elearning-platform"
+          class="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">E-Learning Platform</h4>
+          <p class="text-gray-600 dark:text-gray-300">Full-stack educational platform with course management</p>
+        </a>
+        <a
+          href="/projects/shipping-calculator"
+          class="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Shipping Calculator App</h4>
+          <p class="text-gray-600 dark:text-gray-300">Mobile app for Indonesian shipping cost calculation</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

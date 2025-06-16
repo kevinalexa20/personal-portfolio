@@ -4,11 +4,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Header from '~/components/widgets/Header.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
@@ -25,8 +25,8 @@ const metadata = {
         { text: 'Home', href: '#' },
         { text: 'About', href: '#about' },
         { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
+        { text: 'Portfolio', href: '#portfolio' },
+        // { text: 'Blog', href: '#blog' },
         { text: 'Github', href: 'https://github.com/kevinalexa20' },
       ]}
       actions={[
@@ -275,14 +275,14 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80',
+      src: 'https://syd.cloud.appwrite.io/v1/storage/buckets/683d53aa000e3272f7df/files/683d544b000e1e1569a3/view?project=6837df42003720ff8f2d&mode=admin',
       alt: 'Ship Crewing Agency Website',
     }}
     callToAction={{
       target: '_blank',
       text: 'View Project',
       icon: 'tabler:chevron-right',
-      href: '#',
+      href: '/projects/elkkana',
     }}>
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
