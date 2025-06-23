@@ -22,3 +22,6 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+WH-blueprint.md
+WH-nearby-location-feature.md
+WH-userflow.md

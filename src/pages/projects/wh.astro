@@ -1,0 +1,320 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import Header from '~/components/widgets/Header.astro';
+
+const metadata = {
+  title: 'WarungHemat - Food Rescue Mobile App | Kev Portfolio',
+  description:
+    'A Flutter-based mobile app developed for a 7-day hackathon to combat food waste and support local culinary UMKM using a client-side geo-location discovery feature.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About', href: '/#about' },
+        { text: 'Resume', href: '/#resume' },
+        { text: 'Portfolio', href: '/#portfolio' },
+        // { text: 'Blog', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/kevinalexa20' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '/#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-8">
+    <!-- Back Button -->
+    <div class="mb-8">
+      <a href="/#portfolio" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+        <Icon name="tabler:arrow-left" class="w-5 h-5 mr-2" />
+        Back to Portfolio
+      </a>
+    </div>
+
+    <!-- Project Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        WarungHemat: Hyperlocal Food Rescue Mobile App
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Context</h3>
+          <p class="text-gray-600 dark:text-gray-300">IBM Mini - Hackathon (Capstone Project)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">My Role</h3>
+          <p class="text-gray-600 dark:text-gray-300">Sole Mobile Developer</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Duration</h3>
+          <p class="text-gray-600 dark:text-gray-300">7-Day Hackathon</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Tech Stack</h3>
+          <p class="text-gray-600 dark:text-gray-300">Flutter, Appwrite, MaterialUI, Riverpod</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a
+          href="https://github.com/kevinalexa20/WH-beta"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+          <Icon name="tabler:brand-github" class="w-5 h-5 mr-2" />
+          GitHub Repository
+        </a>
+        <a
+          href="https://syd.cloud.appwrite.io/v1/storage/buckets/6858a67c0019ab9fadca/files/6858a68a001ae5bb8d5d/view?project=6852ba060004eb5f54fe&mode=admin"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <Icon name="tabler:video" class="w-5 h-5 mr-2" />
+          Video Walkthrough
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Image -->
+    <div class="mb-12">
+      <img
+        src="https://syd.cloud.appwrite.io/v1/storage/buckets/6858a67c0019ab9fadca/files/6858a6ff0023ff6073ad/view?project=6852ba060004eb5f54fe&mode=admin"
+        alt="WarungHemat App Screenshot"
+        class="w-full h-auto object-contain rounded-lg shadow-lg"
+      />
+    </div>
+
+    <!-- Content Sections -->
+    <div class="prose prose-lg max-w-none dark:prose-invert">
+      <!-- Project Overview -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Project Overview & Business Context
+        </h2>
+        <div class="text-gray-700 dark:text-gray-300 space-y-4">
+          <p>
+            "WarungHemat" is a mobile application developed for a 7-day IBM mini-hackathon, designed to address two
+            critical socio-economic challenges in Indonesia: the financial vulnerability of culinary Micro, Small, and
+            Medium Enterprises (MSMEs) and the high rate of food waste. Indonesia discards up to
+            <strong>48 million tons of food annually</strong>, resulting in economic losses of up to
+            <strong>Rp 551 trillion per year</strong>.
+          </p>
+          <p>
+            The app acts as a hyperlocal bridge, connecting MSME merchants with surplus food to local consumers seeking
+            affordable meals. The primary goal was to rapidly develop a Minimum Viable Product (MVP) that demonstrates
+            the concept's feasibility and potential for positive social impact through a user-centric and technically
+            sound solution.
+          </p>
+        </div>
+      </section>
+
+      <!-- My Role & Contributions -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">My Role & Key Contributions</h2>
+        <div class="text-gray-700 dark:text-gray-300 mb-6">
+          <p>
+            As the sole developer, I was responsible for the end-to-end design, development, and implementation of the
+            entire Flutter application within the 7-day timeline. My key contributions focused on delivering the core
+            MVP features:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:shield-check" class="w-8 h-8 text-blue-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Dual-Role Authentication System</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Implemented a secure authentication flow using Appwrite, supporting distinct roles for 'merchant' and
+                  'consumer' to manage access and functionality.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:map-pin" class="w-8 h-8 text-green-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Geo-Location Discovery Feature</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Developed the core consumer feature to automatically display nearby surplus food, sorted by proximity,
+                  by implementing client-side distance calculations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:tools-kitchen-2" class="w-8 h-8 text-purple-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Merchant Food Management</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Created an intuitive interface for merchants to manage their profile, upload surplus food items (name,
+                  price, quantity), and update item status (available/sold out).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-start mb-4">
+              <Icon name="tabler:database" class="w-8 h-8 text-orange-600 mr-3 mt-1" />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Efficient Database Architecture</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  Designed and implemented a normalized database schema in Appwrite with separate collections for users,
+                  profiles, and food items to ensure data integrity and scalability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Stack -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">Technology Stack</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="tabler:brand-flutter" class="w-6 h-6 mr-2" />
+              Frontend & State Management
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• Flutter (Cross-Platform UI)</li>
+              <li>• Dart (Programming Language)</li>
+              <li>• Riverpod (State Management)</li>
+              <li>• Material 3 (Design System)</li>
+              <li>• geolocator (GPS Services)</li>
+              <li>• go_router (Navigation)</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="tabler:server" class="w-6 h-6 mr-2" />
+              Backend (BaaS)
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• Appwrite Authentication</li>
+              <li>• Appwrite Databases</li>
+              <li>• Appwrite Storage</li>
+              <li>• Normalized Data Collections</li>
+              <li>• Role-Based Security Rules</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-lg">
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="tabler:palette" class="w-6 h-6 mr-2" />
+              Design & UX
+            </h3>
+            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• User-Centric Design</li>
+              <li>• Intuitive Merchant Flow</li>
+              <li>• Passive Discovery for Consumers</li>
+              <li>• Psychological Color Palette</li>
+              <li>• flutter_screenutil (Responsive UI)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advanced Features & Technical Implementation -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Technical Challenge & Solution
+        </h2>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <div class="flex items-start mb-4">
+            <!-- <Icon name="tabler:lightbulb" class="w-8 h-8 text-yellow-500 mr-3 mt-1" /> -->
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+                Client-Side Geo-Location Query Implementation
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                <strong>Problem:</strong> Appwrite, the chosen BaaS, lacks native geo-query capabilities (e.g., "find all
+                documents within a 5km radius"). This was a critical blocker for the app's core feature.
+              </p>
+              <br />
+              <p class="text-gray-600 dark:text-gray-300">
+                <strong>Solution:</strong> I engineered a pragmatic client-side solution. Instead of storing a geopoint,
+                merchant locations were stored as separate `latitude` and `longitude` float attributes. The Flutter app then
+                performs the following logic:
+                <ol class="list-decimal list-inside mt-2">
+                  <li>Fetches the user's current GPS coordinates using the `geolocator` package.</li>
+                  <li>Queries Appwrite to retrieve all available food items.</li>
+                  <li>
+                    Locally, on the user's device, it iterates through each item, calculates the distance between the
+                    user and the item using `Geolocator.distanceBetween()`.
+                  </li>
+                  <li>Sorts the entire list based on the calculated distance before rendering it in the UI.</li>
+                </ol>
+              </p>
+              <br />
+              <p class="text-gray-600 dark:text-gray-300">
+                This approach, while not ideal for massive datasets, was a perfect and rapidly implementable strategy
+                for an MVP, demonstrating problem-solving under tight constraints.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Project Outcome & Professional Achievement
+        </h2>
+        <div
+          class="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 p-8 rounded-lg">
+          <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
+            Successfully delivered a fully functional full-stack mobile application MVP from concept to completion
+            within a 7-day hackathon. The project effectively demonstrates a solution to a significant real-world
+            problem through rapid, focused development.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <strong>Key Technical Achievement:</strong> The primary achievement was overcoming a critical backend limitation
+            by architecting and implementing a client-side geo-query solution. This showcases strong problem-solving skills,
+            adaptability, and the ability to deliver core functionality under pressure and technical constraints.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Navigation to Other Projects -->
+    <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Other Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="/projects/elkkana"
+          class="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Ship Crewing Agency Platform</h4>
+          <p class="text-gray-600 dark:text-gray-300">Interactive crew management portal with Vue.js and Appwrite</p>
+        </a>
+        <a href="#" class="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">More Projects Coming Soon</h4>
+          <p class="text-gray-600 dark:text-gray-300">Check back later for more updates.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
