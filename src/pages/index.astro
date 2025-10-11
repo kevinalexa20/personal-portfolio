@@ -1,18 +1,18 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Hero from '~/components/widgets/Hero.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
+import Hero from "~/components/widgets/Hero.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Content from "~/components/widgets/Content.astro";
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Header from '~/components/widgets/Header.astro';
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import Header from "~/components/widgets/Header.astro";
 // import Testimonials from '~/components/widgets/Testimonials.astro';
-import { getPermalink } from '~/utils/permalinks';
+import { getPermalink } from "~/utils/permalinks";
 
 const metadata = {
-  title: 'Kev',
+  title: "Kev",
   ignoreTitleTemplate: true,
 };
 ---
@@ -22,17 +22,17 @@ const metadata = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Portfolio', href: '#portfolio' },
+        { text: "Home", href: "#" },
+        { text: "About", href: "#about" },
+        { text: "Resume", href: "#resume" },
+        { text: "Portfolio", href: "#portfolio" },
         // { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/kevinalexa20' },
+        { text: "Github", href: "https://github.com/kevinalexa20" },
       ]}
       actions={[
         {
-          text: 'Hire me',
-          href: '#',
+          text: "Hire me",
+          href: "#",
         },
       ]}
       isSticky
@@ -46,12 +46,21 @@ const metadata = {
     id="hero"
     title="Kevin Alexandro"
     tagline="Portfolio"
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}>
+    actions={[
+      {
+        variant: "primary",
+        text: "Hire me",
+        href: getPermalink("/contact#form"),
+      },
+    ]}>
     <Fragment slot="subtitle">
-      I'm a Management student with a passion for software development, specializing in Flutter for mobile apps and
-      JavaScript for web development. Through freelance projects since 2019 and intensive training in 2023, I've created
-      websites for various businesses and developed side projects including a social media app and e-learning platform.
-      I blend my management background with technical skills to deliver impactful digital solutions.
+      I'm a Management student with a passion for software development,
+      specializing in Flutter for mobile apps and JavaScript for web
+      development. Through freelance projects since 2019 and intensive training
+      in 2023, I've created websites for various businesses and developed side
+      projects including a social media app and e-learning platform. I blend my
+      management background with technical skills to deliver impactful digital
+      solutions.
     </Fragment>
   </Hero>
 
@@ -62,19 +71,19 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-github',
+        icon: "tabler:brand-github",
         callToAction: {
-          target: '_blank',
-          text: 'Github',
-          href: 'https://github.com/kevinalexa20',
+          target: "_blank",
+          text: "Github",
+          href: "https://github.com/kevinalexa20",
         },
       },
       {
-        icon: 'tabler:brand-gmail',
+        icon: "tabler:brand-gmail",
         callToAction: {
-          target: '_blank',
-          text: 'Mail',
-          href: 'mailto:alexandrokev09@gmail.com',
+          target: "_blank",
+          text: "Mail",
+          href: "mailto:alexandrokev09@gmail.com",
         },
       },
       // {
@@ -88,24 +97,32 @@ const metadata = {
     ]}
     image={{
       // src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      src: 'https://avatars.githubusercontent.com/u/80258952?v=4',
-      alt: 'Colorful Image',
-      loading: 'eager',
+      src: "https://avatars.githubusercontent.com/u/80258952?v=4",
+      alt: "Colorful Image",
+      loading: "eager",
     }}>
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        About me
+      </h2>
       <p>
-        Welcome to my digital workshop. My code is a reflection of my dedication to solving problems through technology,
-        where each line transforms abstract concepts into functional digital experiences.
+        Welcome to my digital workshop. My code is a reflection of my dedication
+        to solving problems through technology, where each line transforms
+        abstract concepts into functional digital experiences.
       </p>
       <br />
       <p>
-        I find inspiration in the intersection of business and technology, whether through exploring new frameworks,
-        analyzing user experiences, or bridging management principles with software development during my continuous
-        learning journey.
+        I find inspiration in the intersection of business and technology,
+        whether through exploring new frameworks, analyzing user experiences, or
+        bridging management principles with software development during my
+        continuous learning journey.
       </p>
       <br />
-      <p>If you're interested in collaborating or want to see my work in action, you can connect with me :</p>
+      <p>
+        If you're interested in collaborating or want to see my work in action,
+        you can connect with me :
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -121,24 +138,30 @@ const metadata = {
     items={[
       {
         title:
+          'Fullstack Developer <br /> <span class="font-normal">PT Intinya Technologi, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">Jul 2025 - Present</span>',
+        description: `Developing and maintaining Selfie Plus, a React Native mobile app for Selfie Time's loyalty program. <br/>Led the upgrade process from legacy React Native to version 0.79.6 with React 19. <br/>Implemented key features including Share to Instagram Stories with anti-crop strategies and platform-specific integrations. <br/>Optimized app performance and implemented TypeScript for improved code maintainability.`,
+        icon: "tabler:briefcase",
+      },
+      {
+        title:
           'Fullstack Web Developer <br /> <span class="font-normal">Ship Crewing Agency, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">Nov 2023 - May 2025</span>',
         description: `Designed, developed, and deployed a full-stack company profile website using Astro framework with Tailwind CSS and shadcn for frontend. <br/>Implemented backend services with Express.js, Node.js, and Prisma ORM connected to Supabase database. <br/>Created responsive UI components and RESTful API endpoints to manage and display company services and crew portfolios. <br/>Managed complete project lifecycle from initial design concepts through deployment and maintenance.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Freelance Web Developer <br /> <span class="font-normal">Production House Agency, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">Jan 2020 - Dec 2020</span>',
         description: `Created a WordPress-based company landing page with portfolio showcase functionality. <br/>Implemented dynamic content management system for client work portfolio updates. <br/>Maintained website and regularly updated content to showcase new client projects and agency work.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Freelance Web Developer <br /> <span class="font-normal">Local Church, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">2020 - 2021</span>',
         description: `Designed and developed an information portal website using WordPress CMS. <br/>Implemented blog system and content management features for daily article updates. <br/>Maintained website functionality and trained staff on content management procedures.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
+    classes={{ container: "max-w-3xl" }}
   />
 
   <Steps
@@ -149,28 +172,28 @@ const metadata = {
         title:
           'Digital Content Strategist & Creator <br /> <span class="font-normal">Artics.Co, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">Sept 2024 - Dec 2024</span>',
         description: `Analyzed platform algorithms and user engagement data to optimize digital content performance. <br/>Implemented technical solutions for content distribution while collaborating with marketing and design teams. <br/>Developed systematic workflows that improved production efficiency and content quality across multiple client projects.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'E-commerce Business Owner <br /> <span class="font-normal">Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">2020 - 2022</span>',
         description: `Managed an independent e-commerce business on Shopee platform. <br /> Developed digital marketing strategies that increased sales. <br /> Managed customer relationships and after-sales service. <br /> Analyzed market trends to identify new product opportunities.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Photographer/Videographer & Digital Content Planner <br /> <span class="font-normal">Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">2019 - 2020</span>',
         description: `Created concept and visual designs according to client's theme. <br /> Created content plans on client's social media <br /> Took photos and edited photos. <br /> Shot videos and edited videos.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Finance Admin Staff <br /> <span class="font-normal">Kingdom Shop, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">Apr 2019 - Nov 2019</span>',
         description: `Managed and optimized marketplace operations as store administrator. <br /> Utilized "Accurate" accounting software to compile and analyze company financial reports. <br /> Implemented systems for tracking accounting transaction records and data management. <br /> Developed analytical and problem-solving skills through inventory management and stock reconciliation.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
+    classes={{ container: "max-w-3xl" }}
   />
 
   <!-- Steps Widget ****************** -->
@@ -183,26 +206,26 @@ const metadata = {
         title:
           'Mobile App Development with Flutter <br /> <span class="font-normal">Android Enthusiast Jakarta</span> <br /> <span class="text-sm font-normal">2023</span>',
         description: `4-month intensive bootcamp covering Flutter framework, Dart programming, state management, API integration, and mobile app deployment.`,
-        icon: 'tabler:certificate',
+        icon: "tabler:certificate",
         // Optional: Add certificate URL or image
       },
       {
         title:
           'JavaScript: From Beginner to Expert <br /> <span class="font-normal">Udemy</span> <br /> <span class="text-sm font-normal">2023</span>',
         description: `Comprehensive JavaScript course covering fundamental concepts to advanced techniques including DOM manipulation, asynchronous programming, and modern ES6+ features.`,
-        icon: 'tabler:certificate',
+        icon: "tabler:certificate",
       },
       {
         title: `Bachelor of Management <br /> <span class="font-normal">Open University Jakarta</span> <br /> <span class="text-sm font-normal">2020 - present</span>`,
         description: `Currently pursuing a degree in Management while simultaneously developing technical skills in software development.`,
-        icon: 'tabler:school',
+        icon: "tabler:school",
       },
       {
         title: `High School Diploma, Social Studies <br /> <span class="font-normal">SMAN 13 Jakarta</span> <br /> <span class="text-sm font-normal">2014 - 2017</span>`,
-        icon: 'tabler:school',
+        icon: "tabler:school",
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
+    classes={{ container: "max-w-3xl" }}
   />
 
   <!-- Features3 Widget ************** -->
@@ -214,43 +237,49 @@ const metadata = {
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Frontend Development',
+        title: "Frontend Development",
         description:
-          'Proficient with JavaScript, ReactJS, Astro framework, Tailwind CSS, and shadcn for creating responsive interfaces.',
+          "Proficient with JavaScript, ReactJS, Astro framework, Tailwind CSS, and shadcn for creating responsive interfaces.",
       },
       {
-        title: 'Mobile App Development',
+        title: "Mobile App Development",
         description:
-          'Experienced in building Flutter applications with Dart programming language for cross-platform mobile solutions.',
+          "Experienced in building Flutter applications with Dart programming language for cross-platform mobile solutions.",
       },
       {
-        title: 'Backend Development',
-        description: 'Skilled in Node.js, Express.js, and Prisma ORM for developing robust server-side applications.',
-      },
-      {
-        title: 'Database Management',
-        description: 'Experienced with Supabase and PostgreSQL for designing and managing application databases.',
-      },
-      {
-        title: 'WordPress Development',
-        description: 'Proficient in creating custom WordPress websites, themes and content management systems.',
-      },
-      {
-        title: 'Full-Stack Development',
-        description: 'Capable of handling end-to-end project implementation from design to deployment.',
-      },
-      {
-        title: 'UI/UX Design',
+        title: "Backend Development",
         description:
-          'Able to create intuitive user interfaces and optimize user experiences across web and mobile platforms.',
+          "Skilled in Node.js, Express.js, and Prisma ORM for developing robust server-side applications.",
       },
       {
-        title: 'API Development',
-        description: 'Experienced in designing and implementing RESTful APIs for seamless data integration.',
+        title: "Database Management",
+        description:
+          "Experienced with Supabase and PostgreSQL for designing and managing application databases.",
       },
       {
-        title: 'Digital Content Strategy',
-        description: 'Skilled in analyzing user engagement and optimizing content for digital platforms.',
+        title: "WordPress Development",
+        description:
+          "Proficient in creating custom WordPress websites, themes and content management systems.",
+      },
+      {
+        title: "Full-Stack Development",
+        description:
+          "Capable of handling end-to-end project implementation from design to deployment.",
+      },
+      {
+        title: "UI/UX Design",
+        description:
+          "Able to create intuitive user interfaces and optimize user experiences across web and mobile platforms.",
+      },
+      {
+        title: "API Development",
+        description:
+          "Experienced in designing and implementing RESTful APIs for seamless data integration.",
+      },
+      {
+        title: "Digital Content Strategy",
+        description:
+          "Skilled in analyzing user engagement and optimizing content for digital platforms.",
       },
     ]}
   />
@@ -264,29 +293,34 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description:
-          'Developed a hyperlocal mobile application designed to combat food waste and support culinary UMKM. The app connects merchants with surplus food to nearby consumers, featuring a location-based discovery system that sorts available meals by proximity. Users can view detailed information about the food and the seller, and directly contact them to arrange a purchase.',
+          "React Native mobile app for Selfie Time loyalty program with features like Share to Instagram Stories, QR code scanning, and geolocation integration. Led the upgrade to React Native 0.79.6 and implemented key features for user engagement.",
       },
       {
-        title: 'Tech Stack:',
+        title: "Tech Stack:",
         description:
-          'Built with Flutter and Dart for cross-platform development. It uses Riverpod for state management and Appwrite as the Backend-as-a-Service (BaaS) for handling the database, authentication, and storage. The core geo-location feature is implemented client-side using the geolocator package.',
+          "Built with React Native 0.79.6, Redux Toolkit with RTK Query for state management, NativeWind (Tailwind CSS for React Native) for styling, and custom image processing with Skia.",
       },
     ]}
     image={{
-      src: 'https://syd.cloud.appwrite.io/v1/storage/buckets/6858a67c0019ab9fadca/files/6858a6ff0023ff6073ad/view?project=6852ba060004eb5f54fe&mode=admin',
-      alt: 'WH-app screenshot',
+      src: "https://file.notion.so/f/f/5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf/ce2dfc37-3283-48ec-90a5-c542a08de8d9/image.png?table=block&id=2897b439-6e74-8003-b1d5-fbe8bf3beaa7&spaceId=5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf&expirationTimestamp=1760184000000&signature=cKp4vW3uLxFBi6-MPt5EqG2G1lDxW5KjRLxLbFx_594&downloadName=image.png",
+      alt: "Selfie Plus App Screenshot",
+      width: 1200,
+      height: 630,
     }}
     callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '/projects/wh',
+      target: "_blank",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "/projects/selfie-plus",
     }}>
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">WarungHemat Mobile Apps</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 1: <br /><span class="text-2xl"
+          >Selfie Plus: Loyalty Program Mobile App</span
+        >
       </h3>
     </Fragment>
 
@@ -299,29 +333,68 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description:
-          'Designed and developed a full-stack company profile website for a ship crewing agency. The platform features dynamic content management, crew profiles, job listings, and company service showcases in a responsive, modern interface.',
+          "Developed a hyperlocal mobile application designed to combat food waste and support culinary UMKM. The app connects merchants with surplus food to nearby consumers, featuring a location-based discovery system that sorts available meals by proximity. Users can view detailed information about the food and the seller, and directly contact them to arrange a purchase.",
       },
       {
-        title: 'Tech Stack:',
+        title: "Tech Stack:",
         description:
-          'Built with Vue.js, Tailwind CSS, and DaisyUI for the frontend. Backend implemented using BaaS platform Appwrite to handle authentication, database, and storage. Deployed with continuous integration for seamless updates.',
+          "Built with Flutter and Dart for cross-platform development. It uses Riverpod for state management and Appwrite as the Backend-as-a-Service (BaaS) for handling the database, authentication, and storage. The core geo-location feature is implemented client-side using the geolocator package.",
       },
     ]}
     image={{
-      src: 'https://syd.cloud.appwrite.io/v1/storage/buckets/683d53aa000e3272f7df/files/683d544b000e1e1569a3/view?project=6837df42003720ff8f2d&mode=admin',
-      alt: 'Ship Crewing Agency Website',
+      src: "https://syd.cloud.appwrite.io/v1/storage/buckets/6858a67c0019ab9fadca/files/6858a6ff0023ff6073ad/view?project=6852ba060004eb5f54fe&mode=admin",
+      alt: "WH-app screenshot",
     }}
     callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '/projects/elkkana',
+      target: "_blank",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "/projects/wh",
     }}>
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">Ship Crewing Agency Platform</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">WarungHemat Mobile Apps</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: "Description:",
+        description:
+          "Designed and developed a full-stack company profile website for a ship crewing agency. The platform features dynamic content management, crew profiles, job listings, and company service showcases in a responsive, modern interface.",
+      },
+      {
+        title: "Tech Stack:",
+        description:
+          "Built with Vue.js, Tailwind CSS, and DaisyUI for the frontend. Backend implemented using BaaS platform Appwrite to handle authentication, database, and storage. Deployed with continuous integration for seamless updates.",
+      },
+    ]}
+    image={{
+      src: "https://syd.cloud.appwrite.io/v1/storage/buckets/683d53aa000e3272f7df/files/683d544b000e1e1569a3/view?project=6837df42003720ff8f2d&mode=admin",
+      alt: "Ship Crewing Agency Website",
+    }}
+    callToAction={{
+      target: "_blank",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "/projects/elkkana",
+    }}>
+    <Fragment slot="content">
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl"
+          >Ship Crewing Agency Platform</span
+        >
       </h3>
     </Fragment>
 
@@ -337,28 +410,31 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description:
-          'Developed a comprehensive e-learning platform with user authentication, course management, video lessons, quizzes, and progress tracking. The platform includes both student and instructor interfaces with real-time analytics.',
+          "Developed a comprehensive e-learning platform with user authentication, course management, video lessons, quizzes, and progress tracking. The platform includes both student and instructor interfaces with real-time analytics.",
       },
       {
-        title: 'Tech Stack:',
+        title: "Tech Stack:",
         description: `Frontend built with React.js, Tailwind CSS, and shadcn components. Backend implemented with Node.js, Express.js, and Prisma ORM. Data stored in PostgreSQL database with Supabase integration for authentication and storage services.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-      alt: 'E-Learning Platform',
+      src: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      alt: "E-Learning Platform",
     }}
     callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '#',
+      target: "_blank",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "#",
     }}>
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">Full-Stack E-Learning Platform</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl"
+          >Full-Stack E-Learning Platform</span
+        >
       </h3>
     </Fragment>
 
@@ -374,27 +450,30 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description: `Created a cross-platform mobile application that calculates shipping costs across multiple Indonesian delivery services. The app compares rates, delivery times, and service options to help users find the most cost-effective shipping solution.`,
       },
       {
-        title: 'Tech Stack:',
+        title: "Tech Stack:",
         description: `Developed with Flutter and Dart for cross-platform compatibility. Implemented RESTful API integration with Indonesian shipping companies. Features include location services, package dimension calculator, and favorite routes saving functionality.`,
       },
     ]}
     image={{
-      src: 'https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/477a64bb730404272176b1a5d6392f86?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBEaCXVzLXdlc3QtMiJHMEUCICjel4gL0X6RGxmZu6z3EW0WPSE05uP1RYBEj26YfplLAiEA3zHS3uArAzj56Eqn5No2Y3FYsTk0CzHrOYj9NcIFqiYqmQUI%2Bv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3Mzk5MzkxNzM4MTkiDBtORylbfb%2FcuTWdMSrtBKUBvRrS1iaCINNZsO2z5HfPqtVVFnCb8NYgIkJl%2FE1qqcqxFG682Z1mtieR%2FBegNKIdT4ZKlrDQbvFH6BFV5G37L3fqMwuPziFERXqbXNRnWCx6sKO%2Bg%2BAIUAYQpIQSIuK84iTPidH%2FMr3B6S1znTsvQT%2BuVQCQewqKulZgwNqmaOk1pfAbxkdtH6VneqrJVTMEtrABplz91QV5RlvkoH7rrIt7jhfNNdNQ83ZRvgOf94v8KOySdyhP33%2BcK8RQw3ytdyoJoT48EXEB%2Bd7bSy0YrBRuOVrnUtJfMMl%2BhzARUa%2FA7vGRR%2FJOtoVJAYgguGqwshIqP5ygKM8vdEGuxvKueWvbWOiD8nbsNlU8HDQdx0r8FVqJHFR%2FepKB7Wyr9LAfM%2FWw7aeE5iczxIXWl%2FhrYbY7%2B9qVvMCA0M57sh2wobJ5AKdxtlrhR1LoGm3MQx72Wxibxd6IcEpXwGBv70gKdbFNbVlZ4QPidGDDkmWRYCBqVld%2B6fWQ7zAYtohMZn%2BfsE9euBhZJGDhhsnUxQrv8PDdTcTHMvRC8XLMtxCjMF1zpGk%2Fg5t%2FxzyiuAsW4n8einc%2BC7bxyxBVtqvJS2ldOOJo3qghEavCeaVzcHnFJSDdu%2FQzSs7jQoi4Sb5OpCIyFaRI%2B%2BQXl0S8qSEfEKoDHdVl3WfcR2941H%2FpZsAlGRzAzYm2iRRO5GlXoqaUVhTH%2BjrIDZHMJwa3omd7oUHEVB9Ye9RL1MtWE1gjxU%2FDUrFql3AtEIMHL3Y%2F42dBNI8oS6bNl0XglSgDfak69gnld5PB9nGUR%2BUsjTxWgvZ9DJ2XiNEkSgvftKQuFzCR1OLCBjqbAZJ3gnro39gffYB2hZXKjPwQT1u2KZP7KrV%2BEwTonukZSNg7PgQPh8EvzBXFKFnlnwf1wZfo5uKgz6NMwV8qFCAHycOCIfhD1lx%2Byg8%2F%2BaCDuvOjL2qV1V8KVsuIveeGyv%2FvaIWz6mdcoSqhJdAgxqEsbcJhemxY5EkFuuDY8WbA72Wzsg6KCnV304c%2F00DR3raYQJqTEUYQBs8V&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250623T011839Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW57AIDCCJO%2F20250623%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=bba496a970d648de4b86a514cec184eca08748e2dafef6ee86a76563d84c7705',
-      alt: 'Shipping Calculator App',
+      src: "",
+      alt: "Shipping Calculator App",
     }}
     callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '#',
+      target: "_blank",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "#",
     }}>
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 4: <br /><span class="text-2xl">Indonesian Shipping Calculator App</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 4: <br /><span class="text-2xl"
+          >Indonesian Shipping Calculator App</span
+        >
       </h3>
     </Fragment>
 
@@ -410,9 +489,9 @@ const metadata = {
     subtitle="Ready to transform your vision into captivating designs?"
     actions={[
       {
-        variant: 'primary',
-        text: 'Hire me',
-        href: '/',
+        variant: "primary",
+        text: "Hire me",
+        href: "/",
       },
     ]}
   />

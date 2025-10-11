@@ -1,0 +1,402 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+import Header from "~/components/widgets/Header.astro";
+
+const metadata = {
+  title: "Selfie Plus - Membership Mobile App | Kev Portfolio",
+  description:
+    "React Native mobile app for Selfie Time loyalty program with features like Share to Instagram Stories, QR code scanning, and geolocation integration.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: "Home", href: "/" },
+        { text: "About", href: "/#about" },
+        { text: "Resume", href: "/#resume" },
+        { text: "Portfolio", href: "/#portfolio" },
+        // { text: 'Blog', href: '#blog' },
+        { text: "Github", href: "https://github.com/kevinalexa20" },
+      ]}
+      actions={[
+        {
+          text: "Hire me",
+          href: "#",
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-8">
+    <!-- Back Button -->
+    <div class="mb-8">
+      <a
+        href="/#portfolio"
+        class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+        <Icon name="tabler:arrow-left" class="w-5 h-5 mr-2" />
+        Back to Portfolio
+      </a>
+    </div>
+
+    <!-- Project Header -->
+    <div class="mb-12">
+      <h1
+        class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Selfie Plus: Loyalty Program Mobile App
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+            Client
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">PT Intinya Technologi</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+            My Role
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">Fullstack Developer</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+            Duration
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">July 2025 - Present</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+            Tech Stack
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            React Native, Tanstack Query, Redux Toolkit, NativeWind
+          </p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
+            Key Features
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Membership, Share to Stories, QR Code, Geolocation, Queueing,
+            Notifications, Product Page, Video Player
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a
+          href="#"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          <Icon name="tabler:brand-google-play" class="w-5 h-5 mr-2" />
+          Google Play Store
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+          <Icon name="tabler:brand-apple" class="w-5 h-5 mr-2" />
+          App Store
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Image -->
+    <div class="mb-12">
+      <img
+        src="https://file.notion.so/f/f/5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf/ce2dfc37-3283-48ec-90a5-c542a08de8d9/image.png?table=block&id=2897b439-6e74-8003-b1d5-fbe8bf3beaa7&spaceId=5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf&expirationTimestamp=1760184000000&signature=cKp4vW3uLxFBi6-MPt5EqG2G1lDxW5KjRLxLbFx_594&downloadName=image.png"
+        alt="Selfie Plus App Screenshot"
+        class="w-full h-auto object-contain rounded-lg shadow-lg"
+      />
+    </div>
+
+    <!-- Content Sections -->
+    <div class="prose prose-lg max-w-none dark:prose-invert">
+      <!-- Project Overview -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Project Overview</h2>
+        <p>
+          Selfie Plus is a React Native mobile application developed for Selfie
+          Time's loyalty program. The app enables users to collect points,
+          redeem vouchers, and interact with partner outlets. As a fullstack
+          developer at PT Intinya Technologi, I've been responsible for
+          implementing key features, upgrading the app's framework, and ensuring
+          optimal performance across both Android and iOS platforms.
+        </p>
+        <p>
+          I am currently leading a full design refresh across all screens
+          (typography, colors, layout, and assets). This overhaul is 95%
+          complete and under R&D review; we are awaiting feedback and revisions
+          prior to release.
+        </p>
+      </section>
+
+      <!-- Key Features -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Key Features</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">
+              Share to Instagram Stories
+            </h3>
+            <p>
+              Implemented an end-to-end solution for sharing photos to Instagram
+              Stories with brand frames. The feature handles photo composition,
+              proper scaling, and platform-specific sharing mechanisms for both
+              Android and iOS. The solution ensures photos aren't cropped by
+              frame edges and maintains high-quality output at 1080x1920
+              resolution.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">
+              Loyalty Program Management
+            </h3>
+            <p>
+              Built a comprehensive system for points tracking, badge
+              achievements, and reward redemption. Users can view their point
+              history, current status, and available rewards in a user-friendly
+              interface. The system integrates with backend services to ensure
+              real-time data synchronization.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">
+              Geolocation & Outlet Discovery
+            </h3>
+            <p>
+              Developed a "Near Me" feature that helps users discover partner
+              outlets in their vicinity. The implementation uses efficient
+              geolocation services with optimized battery usage and integrates
+              with mapping services for directions.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">QR Code Transactions</h3>
+            <p>
+              Created a secure QR code scanning system for in-store transactions
+              and voucher validation. The implementation includes camera access
+              optimization, fast QR detection, and secure transaction processing
+              with backend validation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+            <!-- Ongoing Design Improvements -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Ongoing Design & Feature Expansion</h2>
+        <p>
+          Partnering with the R&D team, I own the ongoing UI/UX refresh,
+          covering updated design systems, assets, and in-app flows. The latest
+          redesign is 95% complete and in review, touching every screen with
+          new typography, color tokens, spacing, and motion while we incorporate
+          final feedback.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Design Ownership</h3>
+            <p>
+              I deliver end-to-end visual updates: refreshed components, imagery,
+              and tighter layout behavior so the mobile experience aligns with the
+              evolving brand direction.
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Feature Enhancements</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Queueing system for Selfie Time members awaiting booth sessions</li>
+              <li>Re-architected notifications for more reliable, contextual delivery</li>
+              <li>Product catalog pages surfacing current packages and add-ons</li>
+              <li>Embedded video players streaming from Instagram and YouTube</li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg md:col-span-2">
+            <h3 class="text-xl font-semibold mb-3">Cross-Platform Polish</h3>
+            <p>
+              Even with a shared React Native codebase, every delivery needs
+              Android and iOS tuning. I adapt navigation flows, interactions, and
+              native bridges so both platforms feel bespoke and perform optimally.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Challenges -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          Technical Challenges & Solutions
+        </h2>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-3">
+              React Native Framework Upgrade
+            </h3>
+            <p>
+              Led the upgrade process from an older React Native version to
+              0.79.6 with React 19. This involved:
+            </p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>
+                Updating Gradle configurations to support AGP 8.6.0 and JDK 17
+              </li>
+              <li>
+                Adapting native modules for compatibility with the new version
+              </li>
+              <li>Implementing support for Android 16KB page sizes</li>
+              <li>Migrating to bridgeless mode for improved performance</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-3">
+              Instagram Stories Integration
+            </h3>
+            <p>Solved complex challenges in the Share to Stories feature:</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>
+                Implemented anti-crop strategies using "contain" fit with safe
+                scaling margins
+              </li>
+              <li>
+                Created a composition system with proper layering (photo → frame
+                → watermark)
+              </li>
+              <li>
+                Built platform-specific sharing mechanisms using content URIs
+                for Android and pasteboard/URL schemes for iOS
+              </li>
+              <li>
+                Optimized file management with automatic cleanup to prevent
+                storage bloat
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-3">Performance Optimization</h3>
+            <p>Enhanced app performance through:</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>
+                Implementing custom image processing with Skia for efficient
+                rendering
+              </li>
+              <li>
+                Optimizing render cycles to maintain smooth UI interactions
+              </li>
+              <li>
+                Using lightweight on-screen rendering with high-resolution
+                exports for sharing features
+              </li>
+              <li>
+                Implementing proper memory management for image processing tasks
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-3">
+              Type Safety Implementation
+            </h3>
+            <p>Improved code quality and maintainability by:</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Migrating key components from JavaScript to TypeScript</li>
+              <li>
+                Implementing comprehensive type definitions for API responses
+                and state management
+              </li>
+              <li>
+                Creating reusable typed custom hooks for common functionality
+              </li>
+              <li>
+                Establishing type-safe patterns for component props and state
+                management
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results & Impact -->
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Results & Impact</h2>
+        <p>
+          The Selfie Plus app has delivered significant value to both users and
+          the business:
+        </p>
+        <ul class="list-disc pl-6 mt-4">
+          <li>
+            Successfully upgraded to React Native 0.79.6 with improved stability
+            and performance
+          </li>
+          <li>
+            Implemented the Share to Stories feature with high user adoption,
+            increasing brand visibility
+          </li>
+          <li>
+            Enhanced user experience with smooth UI interactions and optimized
+            image processing
+          </li>
+          <li>
+            Improved code maintainability through TypeScript implementation and
+            modular architecture
+          </li>
+          <li>
+            Created a platform-ready application compliant with the latest
+            Android and iOS requirements
+          </li>
+        </ul>
+      </section>
+
+      <!-- Key Contributions -->
+      <section>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          My Key Contributions
+        </h2>
+        <ul class="list-disc pl-6">
+          <li>
+            Designed and implemented the end-to-end Share to Stories feature
+            with anti-crop strategies and platform-specific integrations
+          </li>
+          <li>
+            Led the React Native framework upgrade process from legacy version
+            to 0.79.6
+          </li>
+          <li>
+            Implemented Android 16KB page sizes support and adapted to
+            bridgeless mode
+          </li>
+          <li>
+            Migrated critical components from JavaScript to TypeScript for
+            improved type safety
+          </li>
+          <li>
+            Optimized image processing performance using custom rendering
+            techniques
+          </li>
+          <li>
+            Created reusable components and custom hooks for common
+            functionality
+          </li>
+          <li>
+            Implemented comprehensive error handling and logging for development
+            and production environments
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</Layout>
+
