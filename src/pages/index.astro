@@ -48,19 +48,17 @@ const metadata = {
     tagline="Portfolio"
     actions={[
       {
-        variant: "primary",
-        text: "Hire me",
-        href: getPermalink("/contact#form"),
+        variant: 'primary',
+        text: 'Hire me',
+        href: getPermalink('/contact#form'),
       },
-    ]}>
+    ]}
+  >
     <Fragment slot="subtitle">
-      I'm a Management student with a passion for software development,
-      specializing in Flutter for mobile apps and JavaScript for web
-      development. Through freelance projects since 2019 and intensive training
-      in 2023, I've created websites for various businesses and developed side
-      projects including a social media app and e-learning platform. I blend my
-      management background with technical skills to deliver impactful digital
-      solutions.
+      I am a passionate software developer specializing in end-to-end digital solutions. With expertise in Flutter for
+      mobile apps and JavaScript for web development, I have been building impactful applications since 2019. From
+      freelance projects to robust e-learning and social media platforms, I focus on delivering seamless and
+      user-centered digital experiences.
     </Fragment>
   </Hero>
 
@@ -97,26 +95,25 @@ const metadata = {
     ]}
     image={{
       // src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      src: "https://avatars.githubusercontent.com/u/80258952?v=4",
-      alt: "Colorful Image",
-      loading: "eager",
-    }}>
+      src: 'https://avatars.githubusercontent.com/u/80258952?v=4',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
     <Fragment slot="content">
       <h2
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         About me
       </h2>
       <p>
-        Welcome to my digital workshop. My code is a reflection of my dedication
-        to solving problems through technology, where each line transforms
-        abstract concepts into functional digital experiences.
+        Welcome to my digital workshop. I am dedicated to solving complex problems through technology, transforming
+        abstract concepts into functional, high-performance digital experiences.
       </p>
       <br />
       <p>
-        I find inspiration in the intersection of business and technology,
-        whether through exploring new frameworks, analyzing user experiences, or
-        bridging management principles with software development during my
-        continuous learning journey.
+        I specialize in end-to-end software development, finding inspiration at the intersection of user experience and
+        robust architecture. My goal is to bridge technical excellence with practical business solutions to create
+        impactful digital products.
       </p>
       <br />
       <p>
@@ -140,7 +137,7 @@ const metadata = {
         title:
           'Fullstack Developer <br /> <span class="font-normal">PT Intinya Technologi, Jakarta, Indonesia</span> <br /> <span class="text-sm font-normal">Jul 2025 - Present</span>',
         description: `Developing and maintaining Selfie Plus, a React Native mobile app for Selfie Time's loyalty program. <br/>Led the upgrade process from legacy React Native to version 0.79.6 with React 19. <br/>Implemented key features including Share to Instagram Stories with anti-crop strategies and platform-specific integrations. <br/>Optimized app performance and implemented TypeScript for improved code maintainability.`,
-        icon: "tabler:briefcase",
+        icon: 'tabler:briefcase',
       },
       {
         title:
@@ -295,7 +292,83 @@ const metadata = {
       {
         title: "Description:",
         description:
-          "React Native mobile app for Selfie Time loyalty program with features like Share to Instagram Stories, QR code scanning, and geolocation integration. Led the upgrade to React Native 0.79.6 and implemented key features for user engagement.",
+          'React Native mobile app for Selfie Time loyalty program with features like Share to Instagram Stories, QR code scanning, and geolocation integration. Led the upgrade to React Native 0.79.6 and implemented key features for user engagement.',
+      },
+      {
+        title: 'Tech Stack:',
+        description:
+          'Built with React Native 0.79.6, Redux Toolkit with RTK Query for state management, NativeWind (Tailwind CSS for React Native) for styling, and custom image processing with Skia.',
+      },
+    ]}
+    image={{
+      src: 'https://file.notion.so/f/f/5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf/ce2dfc37-3283-48ec-90a5-c542a08de8d9/image.png?table=block&id=2897b439-6e74-8003-b1d5-fbe8bf3beaa7&spaceId=5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf&expirationTimestamp=1760184000000&signature=cKp4vW3uLxFBi6-MPt5EqG2G1lDxW5KjRLxLbFx_594&downloadName=image.png',
+      alt: 'Selfie Plus App Screenshot',
+      width: 1200,
+      height: 630,
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'View Project',
+      icon: 'tabler:chevron-right',
+      href: '/projects/selfie-plus',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 1: <br /><span class="text-2xl">Selfie Plus: Loyalty Program Mobile App</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Backend API powering the LiveIt app. Built with NestJS (v11), it provides JWT-based authentication, profiles, habit tracking, devotionals, and production-ready concerns like caching and rate limiting.',
+      },
+      {
+        title: 'Tech Stack:',
+        description:
+          'NestJS, Prisma ORM (PostgreSQL), Redis cache, Throttler, Appwrite SDK, Jest for testing, Docker for deployment.',
+      },
+    ]}
+    image={{
+      src: '',
+      alt: 'LiveIt Server',
+      width: 1200,
+      height: 630,
+    }}
+    callToAction={{
+      target: '_self',
+      text: 'View Project',
+      icon: 'tabler:chevron-right',
+      href: '/projects/liveit-server',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 5: <br /><span class="text-2xl">LiveIt Server — Backend API</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Developed a hyperlocal mobile application designed to combat food waste and support culinary UMKM. The app connects merchants with surplus food to nearby consumers, featuring a location-based discovery system that sorts available meals by proximity. Users can view detailed information about the food and the seller, and directly contact them to arrange a purchase.',
       },
       {
         title: "Tech Stack:",
@@ -310,17 +383,15 @@ const metadata = {
       height: 630,
     }}
     callToAction={{
-      target: "_blank",
-      text: "View Project",
-      icon: "tabler:chevron-right",
-      href: "/projects/selfie-plus",
-    }}>
+      target: '_blank',
+      text: 'View Project',
+      icon: 'tabler:chevron-right',
+      href: '/projects/wh',
+    }}
+  >
     <Fragment slot="content">
-      <h3
-        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl"
-          >Selfie Plus: Loyalty Program Mobile App</span
-        >
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">WarungHemat Mobile Apps</span>
       </h3>
     </Fragment>
 
@@ -348,11 +419,12 @@ const metadata = {
       alt: "WH-app screenshot",
     }}
     callToAction={{
-      target: "_blank",
-      text: "View Project",
-      icon: "tabler:chevron-right",
-      href: "/projects/wh",
-    }}>
+      target: '_blank',
+      text: 'View Project',
+      icon: 'tabler:chevron-right',
+      href: '/projects/elkkana',
+    }}
+  >
     <Fragment slot="content">
       <h3
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -424,11 +496,12 @@ const metadata = {
       alt: "E-Learning Platform",
     }}
     callToAction={{
-      target: "_blank",
-      text: "View Project",
-      icon: "tabler:chevron-right",
-      href: "#",
-    }}>
+      target: '_blank',
+      text: 'View Project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
     <Fragment slot="content">
       <h3
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -459,15 +532,16 @@ const metadata = {
       },
     ]}
     image={{
-      src: "",
-      alt: "Shipping Calculator App",
+      src: '',
+      alt: 'Shipping Calculator App',
     }}
     callToAction={{
-      target: "_blank",
-      text: "View Project",
-      icon: "tabler:chevron-right",
-      href: "#",
-    }}>
+      target: '_blank',
+      text: 'View Project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
     <Fragment slot="content">
       <h3
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
