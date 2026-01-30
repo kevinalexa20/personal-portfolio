@@ -4,9 +4,9 @@ import { Icon } from "astro-icon/components";
 import Header from "~/components/widgets/Header.astro";
 
 const metadata = {
-  title: "LiveIt Server - Backend API | Kev Portfolio",
+  title: "LIVEIT Platform | Kev Portfolio",
   description:
-    "NestJS backend service with Prisma, PostgreSQL, JWT auth, Redis caching, rate limiting, and Appwrite integration for storage and media.",
+    "LIVEIT is a faith-based habit platform: Flutter app + NestJS/Prisma backend + SvelteKit CMS, featuring Habit Tracker, Zoe Points gamification, devotionals, and a Medium-like articles system with Appwrite integration.",
 };
 ---
 
@@ -39,7 +39,7 @@ const metadata = {
     <div class="mb-12">
       <h1
         class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        LiveIt Server: Backend API Service
+        LIVEIT: Habit Platform for Spiritual Growth
       </h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
@@ -47,13 +47,13 @@ const metadata = {
           <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
             Project
           </h3>
-          <p class="text-gray-600 dark:text-gray-300">LiveIt Server (NestJS)</p>
+          <p class="text-gray-600 dark:text-gray-300">LIVEIT Platform (Monorepo)</p>
         </div>
         <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
           <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
             My Role
           </h3>
-          <p class="text-gray-600 dark:text-gray-300">Backend Developer</p>
+          <p class="text-gray-600 dark:text-gray-300">Backend + Platform Engineer</p>
         </div>
         <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
           <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
@@ -66,17 +66,17 @@ const metadata = {
             Tech Stack
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            NestJS 11, Prisma, PostgreSQL, JWT, Redis, Throttler, Appwrite,
-            Jest, Docker
+            Flutter (Bloc + Dio), NestJS 11, Prisma 6, PostgreSQL, SvelteKit,
+            Appwrite (Auth/Storage/Tables), Redis (optional), Swagger, Docker
           </p>
         </div>
         <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
           <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
-            Key Features
+            Platform Scope
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            JWT/OAuth Auth, Profiles, Habit Tracker (idempotent), Devotionals
-            (Appwrite Tables), Redis cache & rate limits
+            Mobile App + Backend API + Internal CMS for content and user
+            progression
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ const metadata = {
     <div class="mb-12">
       <img
         src="/selfie-plus-app.png"
-        alt="LiveIt Server Diagram"
+        alt="LIVEIT Platform Architecture"
         class="w-full h-auto object-contain rounded-lg shadow-lg"
       />
     </div>
@@ -102,72 +102,84 @@ const metadata = {
       <section class="mb-12">
         <h2 class="text-2xl md:text-3xl font-bold mb-6">Project Overview</h2>
         <p>
-          LiveIt Server is a modular NestJS 11 backend powering authentication,
-          profiles, habit tracking, and daily devotionals. It integrates
-          PostgreSQL via Prisma, Appwrite for IdP/storage, and ships with
-          operational concerns like caching, rate limiting, and Dockerized
-          deployment. Caching is configurable: Redis in production, in-memory
-          fallback when Redis is unavailable.
+          LIVEIT is a faith-based platform that helps young Christians build
+          real spiritual habits through an action-oriented habit tracker,
+          meaningful gamification (Zoe Points, streaks, badges), and curated
+          inspirational content. The product is built as a monorepo with a
+          Flutter mobile client, a NestJS backend as the source of truth, and a
+          SvelteKit CMS used internally to manage content.
         </p>
       </section>
 
       <section class="mb-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">Core Modules</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Platform Architecture</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            Clients: Flutter app (consumer) and SvelteKit CMS (internal admin)
+          </li>
+          <li>
+            Backend: NestJS API as the single entry point and business logic
+            layer
+          </li>
+          <li>
+            Data: PostgreSQL via Prisma for core domain data; Appwrite for
+            auth/storage/tables (proxy + hybrid strategy)
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Data Flow</h2>
+        <pre><code>Flutter App  ----\
+                 \\--> NestJS API --> PostgreSQL (Prisma)
+SvelteKit CMS ----/                 \
+                                   --> Appwrite (Auth/Files/Tables)</code></pre>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Repositories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
             <h3 class="text-xl font-semibold mb-3">
-              Authentication & Profiles
+              liveit-server (Backend API)
             </h3>
             <ul class="list-disc pl-6 space-y-2">
               <li>
-                JWT with issuer/audience via Passport strategy + Redis blacklist
+                NestJS 11 + Prisma/PostgreSQL as source of truth
               </li>
               <li>
-                Email-claim flow with TTL in Redis; public profiles with privacy
+                Appwrite proxy integration for auth/storage/tables
               </li>
               <li>
-                DTO validation and exception filters; throttling on sensitive
-                routes
-              </li>
-            </ul>
-          </div>
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Habit Tracker</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>
-                Idempotent daily check-in/undo; archive without losing history
-              </li>
-              <li>
-                Partial-unique constraint to prevent duplicate active habits
-              </li>
-              <li>
-                Custom habits activate immediately with limited initial reach
-                and moderation/reporting
+                Swagger docs, rate limiting, Docker deployment path
               </li>
             </ul>
           </div>
           <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Devotionals</h3>
+            <h3 class="text-xl font-semibold mb-3">liveit-flutter (Mobile App)</h3>
             <ul class="list-disc pl-6 space-y-2">
               <li>
-                Appwrite Tables DB integration: today/list/get with query
-                filters
+                Flutter + Bloc for state management, Dio for HTTP
               </li>
               <li>
-                Like/unlike with counters; view count and estimated read time
+                Consumes backend APIs for auth, habits, gamification, content
               </li>
               <li>
-                Create a habit from a devotional (cross-module integration)
+                Built for young adult audience (18-35) with habit-first UX
               </li>
             </ul>
           </div>
           <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Appwrite & Media</h3>
+            <h3 class="text-xl font-semibold mb-3">liveit-web (CMS Admin)</h3>
             <ul class="list-disc pl-6 space-y-2">
-              <li>Server SDK module for Users/Account, Tables, and Storage</li>
               <li>
-                Env-driven config and featured image URL generation for public
-                buckets
+                SvelteKit CMS for articles/content workflows
+              </li>
+              <li>
+                Uses backend API with admin gating (JWT + allowlist)
+              </li>
+              <li>
+                Supports Medium-like content model and asset uploads
               </li>
             </ul>
           </div>
@@ -175,46 +187,80 @@ const metadata = {
       </section>
 
       <section class="mb-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">
-          Security & Reliability
-        </h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Core Capabilities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Auth & Profiles</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Appwrite-proxy auth (email/password + OAuth) + JWT</li>
+              <li>Email-claim flow with TTL and profile privacy controls</li>
+              <li>Profile summary endpoints with habit + gamification aggregates</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Habit Tracker</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Idempotent check-in/undo; archive without losing history</li>
+              <li>Timezone-aware day boundary (requires <code>profiles.timezone</code>)</li>
+              <li>Custom habits + reporting + moderation hooks</li>
+              <li>Phase 2A scheduling: frequency/repeat period + ordering + visuals</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Gamification</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Zoe Points awards: check-in, all-done, streak milestones</li>
+              <li>Badges/achievements with reflection prompts + level system</li>
+              <li>Points history audit log with hybrid storage strategy</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Devotionals</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Daily devotional delivery via Appwrite Tables facade</li>
+              <li>Like/unlike, view count, reading time, and habit integration</li>
+              <li>Designed for curation-first, low-conflict consumption</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Articles CMS</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Medium-like content: ProseMirror JSON + derived word/read time</li>
+              <li>Draft/publish/unpublish lifecycle + public slug endpoints</li>
+              <li>Asset uploads (image/video) with size/MIME checks + admin gating</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Current Status</h2>
         <ul class="list-disc pl-6 space-y-2">
           <li>
-            Global rate limiting via <code>@nestjs/throttler</code> with per-route
-            overrides
+            Implemented: Auth, Profiles, Habit Tracker, Gamification, Devotionals,
+            Articles CMS
           </li>
           <li>
-            CacheModule with Redis store or in-memory fallback (<code
-              >CACHE_DRIVER</code
-            >)
+            In progress / planned: push notifications (reminders) and content
+            seeding workflows
           </li>
-          <li>
-            Prisma migrations and seed scripts; Docker Compose for API + Redis
-          </li>
-          <li>JWT guard + strategy with issuer/audience checks</li>
         </ul>
       </section>
 
       <section class="mb-12">
         <h2 class="text-2xl md:text-3xl font-bold mb-6">
-          Development & Operations
+          Reliability & Operations
         </h2>
         <ul class="list-disc pl-6 space-y-2">
-          <li>Local dev: <code>npm run start:dev</code> with hot reload</li>
-          <li>
-            Database: Prisma + PostgreSQL, migrations via <code
-              >npm run migrate:deploy</code>
-          </li>
-          <li>
-            Seeding: <code>npm run db:seed</code> or <code
-              >npm run seed:devotionals</code>
-          </li>
-          <li>
-            Quality: ESLint + Prettier, tests with Jest (<code
-              >npm run test:cov</code
-            >)
-          </li>
-          <li>Deployment: Dockerfile and docker-compose for production</li>
+          <li>API docs: Swagger UI at <code>/api</code> with bearer auth</li>
+          <li>Global rate limiting via <code>@nestjs/throttler</code> with per-route overrides</li>
+          <li>Configurable cache layer: Redis or in-memory (<code>CACHE_DRIVER</code>)</li>
+          <li>Structured JSON logs (nestjs-pino) with requestId propagation</li>
+          <li>Dockerized deployment path + Prisma migrations/seed scripts</li>
         </ul>
       </section>
 
@@ -236,10 +282,12 @@ const metadata = {
             <ul class="list-disc pl-6 space-y-2">
               <li><code>NODE_ENV=production</code>, <code>JWT_KEY</code></li>
               <li><code>DATABASE_URL</code> (attach DO Managed PostgreSQL)</li>
-              <li>Optional Redis: <code>CACHE_DRIVER=redis</code>, <code>REDIS_HOST</code>, <code>REDIS_PORT</code></li>
+              <li>Cache: <code>CACHE_DRIVER</code> (memory/redis) + <code>REDIS_HOST</code>/<code>REDIS_PORT</code> when enabled</li>
               <li><code>APP_URL</code>, <code>FRONTEND_URL</code></li>
               <li><code>APPWRITE_ENDPOINT</code>, <code>APPWRITE_PROJECT_ID</code>, <code>APPWRITE_API_KEY</code></li>
-              <li>Devotionals IDs (DB/collections/bucket) when enabled</li>
+              <li>Appwrite IDs: <code>APPWRITE_DB_ID</code>, <code>APPWRITE_*_COLLECTION_ID</code>, <code>APPWRITE_*_BUCKET_ID</code></li>
+              <li>CMS admin gating: <code>CMS_ADMIN_EMAILS</code></li>
+              <li>Logging: <code>LOG_LEVEL</code>, <code>PRISMA_SLOW_QUERY_THRESHOLD_MS</code></li>
             </ul>
           </div>
         </div>
@@ -257,17 +305,17 @@ const metadata = {
         </h2>
         <ul class="list-disc pl-6 space-y-2">
           <li>
-            Defined module boundaries and contracts across Auth, Profiles,
-            Habits, Devotionals
+            Shipped platform foundations across Auth, Profiles, Habit Tracker,
+            Gamification, Devotionals, and Articles
           </li>
           <li>
-            Implemented guard/strategy patterns, DTO validation, and rate limits
-            for safer defaults
+            Built secure-by-default patterns: guards, DTO validation, and per-route throttling
           </li>
           <li>
-            Designed a scalable cache strategy with Redis and graceful memory
-            fallback
+            Established production ops baseline: Swagger docs, JSON logs + requestId,
+            and a Redis-to-memory cache fallback
           </li>
+          <li>Enabled internal content workflows via a dedicated CMS + admin gating</li>
         </ul>
       </section>
     </div>
