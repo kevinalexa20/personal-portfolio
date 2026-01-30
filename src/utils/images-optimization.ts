@@ -223,9 +223,20 @@ export const astroAsseetsOptimizer: ImagesOptimizer = async (
     return [];
   }
 
+  const isRemote =
+    typeof image === 'string' && (image.startsWith('http://') || image.startsWith('https://'));
+  const ratio = _width && _height ? _width / _height : undefined;
+
   return Promise.all(
     breakpoints.map(async (w: number) => {
-      const result = await getImage({ src: image, width: w, inferSize: true, ...(format ? { format: format } : {}) });
+      const height = ratio ? computeHeight(w, ratio) : _height || undefined;
+      const result = await getImage({
+        src: image,
+        width: w,
+        height: height,
+        inferSize: !isRemote,
+        ...(format ? { format: format } : {}),
+      });
 
       return {
         src: result?.src,
