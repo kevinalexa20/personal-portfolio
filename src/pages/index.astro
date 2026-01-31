@@ -328,6 +328,82 @@ const metadata = {
     isReversed
     items={[
       {
+        title: "Description:",
+        description:
+          "Kiosk tablet app for Selfie Time: scan/validate transactions, guide users through photo selection and editing, and continue into order/payment and export flows. Built as a full refactor from a legacy Meteor.js kiosk with a redesigned UI/UX aligned to RnD + UI/UX team requirements.",
+      },
+      {
+        title: "Tech Stack:",
+        description:
+          "Flutter (BLoC, Dio, AutoRoute, GetIt), image editing (pro_image_editor + custom canvas widgets), QR scanning, Firebase Remote Config/Analytics/Crashlytics, Shorebird update strategy, and kiosk-mode device hardening. Backend refactor in parallel: migrated from Meteor to Electron + Express (separate service).",
+      },
+    ]}
+    image={{
+      src: "/projects/selfie-time-kiosk-tablet/home.png",
+      alt: "Selfie Time Kiosk Tablet",
+      width: 1200,
+      height: 630,
+    }}
+    callToAction={{
+      target: "_self",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "/projects/selfie-time-kiosk-tablet",
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">Selfie time kiosk Tablet</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: "Description:",
+        description:
+          "Edge backend that powers Selfie Time kiosk operations. Packaged as an Electron app that runs a clustered Express server on the local network, caches operational data in MongoDB, and exposes backward-compatible APIs for the Flutter kiosk client.",
+      },
+      {
+        title: "Tech Stack:",
+        description:
+          "Electron, Node.js cluster, Express 5, TypeScript, MongoDB + Mongoose, Zod validation, Winston logging, Sharp/FFmpeg media pipelines, and local API proxy/sync to upstream Selfie Time services.",
+      },
+    ]}
+    image={{
+      src: "/projects/selfie-time-kiosk-server/arch.svg",
+      alt: "Selfie Time Kiosk Server Architecture",
+      width: 1200,
+      height: 630,
+    }}
+    callToAction={{
+      target: "_self",
+      text: "View Project",
+      icon: "tabler:chevron-right",
+      href: "/projects/selfie-time-kiosk-server",
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl">Selfie time kiosk Server (Electron + Express)</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
         title: 'Description:',
         description:
           'Backend API powering the LiveIt app. Built with NestJS (v11), it provides JWT-based authentication, profiles, habit tracking, devotionals, and production-ready concerns like caching and rate limiting.',
@@ -353,7 +429,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">LiveIt Platform: Fullstack Web & Mobile apps</span>
+        Project 4: <br /><span class="text-2xl">LiveIt Platform: Fullstack Web & Mobile apps</span>
       </h3>
     </Fragment>
 
@@ -389,7 +465,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">WarungHemat Mobile App</span>
+        Project 5: <br /><span class="text-2xl">WarungHemat Mobile App</span>
       </h3>
     </Fragment>
 
@@ -425,7 +501,7 @@ const metadata = {
     <Fragment slot="content">
       <h3
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 4: <br /><span class="text-2xl"
+        Project 6: <br /><span class="text-2xl"
           >Ship Crewing Agency Platform</span
         >
       </h3>

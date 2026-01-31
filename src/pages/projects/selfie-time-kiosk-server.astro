@@ -1,0 +1,161 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+import Header from "~/components/widgets/Header.astro";
+
+const metadata = {
+  title: "Selfie Time Kiosk Server (Electron + Express) | Kev Portfolio",
+  description:
+    "Refactor besar-besaran dari legacy Meteor kiosk server ke Electron-hosted Express 5 cluster: MongoDB caching, backward-compatible Flutter endpoints, queue/work-order flows, dan media processing (Sharp/FFmpeg/remove_bg).",
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: "Home", href: "/" },
+        { text: "About", href: "/#about" },
+        { text: "Resume", href: "/#resume" },
+        { text: "Portfolio", href: "/#portfolio" },
+        { text: "Github", href: "https://github.com/kevinalexa20" },
+      ]}
+      actions={[{ text: "Hire me", href: "#" }]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-8">
+    <div class="mb-8">
+      <a
+        href="/#portfolio"
+        class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+        <Icon name="tabler:arrow-left" class="w-5 h-5 mr-2" /> Back to Portfolio
+      </a>
+    </div>
+
+    <div class="mb-12">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Selfie Time Kiosk Server: Electron + Express Edge Backend
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Client</h3>
+          <p class="text-gray-600 dark:text-gray-300">Selfie Time (PT Intinya Technology)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">My Role</h3>
+          <p class="text-gray-600 dark:text-gray-300">Backend Engineer (2-person refactor team)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Duration</h3>
+          <p class="text-gray-600 dark:text-gray-300">2 months (parallel with kiosk tablet refactor)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Tech Stack</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Electron, Node.js (cluster), Express 5, TypeScript, MongoDB + Mongoose, Zod, Winston,
+            Sharp, FFmpeg, remove_bg, electron-updater
+          </p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Quality</h3>
+          <p class="text-gray-600 dark:text-gray-300">Vitest + Supertest; 500+ tests</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        <span class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg opacity-70 cursor-not-allowed">
+          <Icon name="tabler:lock" class="w-5 h-5 mr-2" /> Private Repository
+        </span>
+      </div>
+    </div>
+
+    <div class="mb-12">
+      <img
+        src="/projects/selfie-time-kiosk-server/arch.svg"
+        alt="Selfie Time Kiosk Server Architecture"
+        class="w-full h-auto object-contain rounded-lg shadow-lg"
+      />
+    </div>
+
+    <div class="prose prose-lg max-w-none dark:prose-invert">
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Project Overview & Business Context</h2>
+        <p>
+          This server is the edge backend for Selfie Time kiosks. It runs locally (inside the kiosk environment) and exposes a stable API surface for kiosk
+          clients, while also proxying and syncing with upstream Selfie Time services.
+        </p>
+        <p>
+          This was a major refactor executed by a 2-person team. The goal was to replace a legacy Meteor-based kiosk server with a clearer, more testable,
+          and more operable Electron + Express implementation, while keeping critical client flows compatible during the transition.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Core Responsibilities</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Act as a local API gateway for kiosk apps on the same LAN.</li>
+          <li>Cache critical operational data in MongoDB (settings, users, products, transactions, assets).</li>
+          <li>Provide backwards-compatible endpoints used by the Flutter kiosk client (scan, payment, editing flows).</li>
+          <li>Handle CPU-heavy media pipelines: image storage, hi-res variants, background removal, slideshow generation.</li>
+          <li>Expose operational endpoints for diagnostics: health, logs, network info, cluster status.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Architecture Decisions (Why This Setup)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Clustered Express for Concurrency</h3>
+            <p>
+              Kiosk workloads include bursty traffic (multiple tablets/devices on LAN) and heavy CPU tasks. The server uses Node cluster with a primary-owned
+              TCP balancer that forwards sockets to the least-busy worker (tracked via in-flight counters).
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Routes -&gt; Services -&gt; Models</h3>
+            <p>
+              HTTP concerns (validation, status codes) stay in routes; business logic is centralized in services; persistence is in Mongoose models. This makes
+              behavior testable without the HTTP layer and prevents route files turning into spaghetti.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Key Flows (Client -&gt; Edge -&gt; Upstream)</h2>
+        <pre><code>Kiosk Tablet
+  -&gt; Local Express API (LAN)
+     -&gt; MongoDB cache (settings/products/transactions)
+     -&gt; Upstream Selfie Time API (proxy + sync)
+     -&gt; Media processing (Sharp/FFmpeg/remove_bg)</code></pre>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Operational Reliability</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Correlation IDs for request tracing across logs.</li>
+          <li>Winston + daily rotation for field diagnostics.</li>
+          <li>Graceful shutdown of workers and background services.</li>
+          <li>Compatibility routing: both root and versioned API bases (e.g., /api and /api/vX).</li>
+          <li>Electron ServerManager isolates the server into a separate process to avoid UI instability.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Outcome</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Reduced risk of regressions by moving from Meteor's tightly-coupled runtime to explicit TypeScript APIs with Zod validation.</li>
+          <li>Improved outlet operability: built-in health checks, log viewer endpoints, network info, and cluster status for faster troubleshooting.</li>
+          <li>Increased throughput and stability on kiosk hardware via clustered workers + least-busy socket balancing for bursty LAN traffic.</li>
+          <li>Made heavy image/video workloads safer: serialized rembg jobs, idempotent caching, and background processing to keep UI flows responsive.</li>
+          <li>Improved delivery confidence with extensive automated tests (Vitest + Supertest) and a clean service layer that is easier to maintain.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</Layout>

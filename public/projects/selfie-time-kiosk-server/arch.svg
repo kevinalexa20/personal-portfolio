@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020" />
+      <stop offset="0.5" stop-color="#12264a" />
+      <stop offset="1" stop-color="#0e1a33" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06" />
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0" result="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <style>
+      .title { font: 700 44px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #eaf0ff; }
+      .sub { font: 400 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,240,255,0.78); }
+      .nodeTitle { font: 700 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,240,255,0.95); }
+      .nodeBody { font: 400 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,240,255,0.78); }
+      .chip { font: 600 13px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(255,255,255,0.9); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <g opacity="0.25">
+    <circle cx="1020" cy="120" r="140" fill="#4cc3ff" />
+    <circle cx="1080" cy="520" r="190" fill="#ff5ea8" />
+    <circle cx="190" cy="520" r="210" fill="#3cffad" />
+  </g>
+
+  <g filter="url(#soft)">
+    <text x="72" y="92" class="title">Selfie Time Kiosk Server</text>
+    <text x="72" y="124" class="sub">Electron + Express edge server with cluster balancing, local cache, and media processing</text>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#soft)">
+    <rect x="72" y="170" width="330" height="150" rx="18" fill="url(#panel)" stroke="rgba(255,255,255,0.18)" />
+    <text x="96" y="210" class="nodeTitle">Electron App</text>
+    <text x="96" y="236" class="nodeBody">Runs the UI + starts a</text>
+    <text x="96" y="256" class="nodeBody">separate server process</text>
+    <text x="96" y="276" class="nodeBody">(ServerManager + IPC)</text>
+    <rect x="96" y="290" width="108" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="110" y="308" class="chip">Desktop</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="435" y="170" width="420" height="150" rx="18" fill="url(#panel)" stroke="rgba(255,255,255,0.18)" />
+    <text x="459" y="210" class="nodeTitle">Express API (Cluster)</text>
+    <text x="459" y="236" class="nodeBody">Primary balancer hands sockets</text>
+    <text x="459" y="256" class="nodeBody">to least-busy workers (manual LB)</text>
+    <text x="459" y="276" class="nodeBody">Routes -&gt; Services -&gt; Models</text>
+    <rect x="459" y="290" width="190" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="473" y="308" class="chip">Edge API on LAN</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="885" y="170" width="243" height="150" rx="18" fill="url(#panel)" stroke="rgba(255,255,255,0.18)" />
+    <text x="909" y="210" class="nodeTitle">MongoDB</text>
+    <text x="909" y="236" class="nodeBody">Local cache +</text>
+    <text x="909" y="256" class="nodeBody">settings + logs</text>
+    <text x="909" y="276" class="nodeBody">(Mongoose)</text>
+    <rect x="909" y="290" width="112" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="923" y="308" class="chip">Offline-ready</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="72" y="356" width="526" height="202" rx="18" fill="url(#panel)" stroke="rgba(255,255,255,0.18)" />
+    <text x="96" y="396" class="nodeTitle">Media Processing</text>
+    <text x="96" y="422" class="nodeBody">- Sharp pipelines (hires/lowres, sharpen for passport flows)</text>
+    <text x="96" y="444" class="nodeBody">- remove_bg queue (serialized) + cached outputs</text>
+    <text x="96" y="466" class="nodeBody">- FFmpeg slideshow generation</text>
+    <text x="96" y="488" class="nodeBody">- Optional beauty watchers / GFPGAN integration</text>
+    <rect x="96" y="516" width="190" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="110" y="534" class="chip">CPU-heavy tasks</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="628" y="356" width="500" height="202" rx="18" fill="url(#panel)" stroke="rgba(255,255,255,0.18)" />
+    <text x="652" y="396" class="nodeTitle">Integrations</text>
+    <text x="652" y="422" class="nodeBody">- Selfietime API proxy (server_url + token settings)</text>
+    <text x="652" y="444" class="nodeBody">- Flutter compatibility routes (scan-qr-order, check-payment-status)</text>
+    <text x="652" y="466" class="nodeBody">- Queue management and work order flows</text>
+    <text x="652" y="488" class="nodeBody">- Health, logs, and network discovery endpoints</text>
+    <rect x="652" y="516" width="220" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="666" y="534" class="chip">Operational tooling</text>
+  </g>
+
+  <!-- Connectors -->
+  <g opacity="0.8" stroke="rgba(234,240,255,0.65)" stroke-width="2">
+    <path d="M402 245 C 430 245, 430 245, 435 245" fill="none" />
+    <path d="M855 245 C 872 245, 876 245, 885 245" fill="none" />
+    <path d="M645 320 C 645 338, 420 338, 335 356" fill="none" />
+    <path d="M690 320 C 742 338, 760 338, 790 356" fill="none" />
+  </g>
+
+  <text x="72" y="606" class="sub">Built for kiosk operations: reliability, observability, and backwards-compatible APIs.</text>
+</svg>

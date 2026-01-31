@@ -1,0 +1,199 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+import Header from "~/components/widgets/Header.astro";
+
+const metadata = {
+  title: "Selfie Time Kiosk Tablet | Kev Portfolio",
+  description:
+    "Refactor of Selfie Time's legacy Meteor.js kiosk into a modern Flutter tablet kiosk with redesigned UI/UX and a parallel backend migration to Electron + Express.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: "Home", href: "/" },
+        { text: "About", href: "/#about" },
+        { text: "Resume", href: "/#resume" },
+        { text: "Portfolio", href: "/#portfolio" },
+        { text: "Github", href: "https://github.com/kevinalexa20" },
+      ]}
+      actions={[{ text: "Hire me", href: "#" }]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-8">
+    <div class="mb-8">
+      <a
+        href="/#portfolio"
+        class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+        <Icon name="tabler:arrow-left" class="w-5 h-5 mr-2" /> Back to Portfolio
+      </a>
+    </div>
+
+    <div class="mb-12">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Selfie Time Kiosk Tablet: Flutter Refactor + New UI/UX + Backend Migration
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Client</h3>
+          <p class="text-gray-600 dark:text-gray-300">Selfie Time (PT Intinya Technology)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">My Role</h3>
+          <p class="text-gray-600 dark:text-gray-300">Fullstack Developer (Flutter + Electron/Express)</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Duration</h3>
+          <p class="text-gray-600 dark:text-gray-300">2 months</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Tech Stack</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Flutter (BLoC, Dio, AutoRoute, GetIt), Firebase Remote Config/Crashlytics/Analytics, Shorebird, kiosk-mode hardening,
+            Electron + Express (backend)
+          </p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Project Type</h3>
+          <p class="text-gray-600 dark:text-gray-300">Internal / Private codebase</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        <span
+          class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg opacity-70 cursor-not-allowed">
+          <Icon name="tabler:lock" class="w-5 h-5 mr-2" /> Private Repository
+        </span>
+      </div>
+    </div>
+
+    <div class="mb-12">
+      <img
+        src="/projects/selfie-time-kiosk-tablet/home.png"
+        alt="Selfie Time Kiosk Tablet - Home Screen"
+        class="w-full h-auto object-contain rounded-lg shadow-lg"
+      />
+    </div>
+
+    <div class="prose prose-lg max-w-none dark:prose-invert">
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Project Overview & Business Context</h2>
+        <p>
+          This project is a full refactor of a legacy kiosk that previously ran on Meteor.js. The kiosk is revenue-critical and runs outside mobile app
+          stores, so stability, recoverability, and controlled rollouts are as important as the user experience.
+        </p>
+        <p>
+          Over 2 months, I rebuilt the kiosk tablet application in Flutter with a new UI/UX and modernized the supporting backend server layer by migrating
+          from Meteor to an Electron + Express architecture.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Primary User Flow</h2>
+        <pre><code>Home
+  -&gt; Scan QR / Input PIN
+  -&gt; Load transaction + validate
+  -&gt; Editing flow (collage/editor or auto-crop depending on product)
+  -&gt; Order/payment review (promo/voucher depending on config)
+  -&gt; Export/render + queue/print handoff
+  -&gt; Reset to Home (kiosk session hygiene)</code></pre>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Editing & Review UI</h2>
+        <p>
+          The editor flow is built to be guided and predictable for kiosk usage: users move through orientation, filters, layouts, backgrounds, and review,
+          with clear navigation and session safety.
+        </p>
+        <div class="mt-6">
+          <img
+            src="/projects/selfie-time-kiosk-tablet/editor.png"
+            alt="Selfie Time Kiosk Tablet - Editor Screen"
+            class="w-full h-auto object-contain rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">My Role & Key Contributions</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            Rebuilt the kiosk app in Flutter (not a 1:1 migration): redesigned UI/UX and interaction patterns based on RnD and UI/UX team requests.
+          </li>
+          <li>
+            Implemented guided flows for transaction intake (QR/PIN), editor/canvas experiences, and stable navigation between screens.
+          </li>
+          <li>
+            Added operational guardrails: kiosk-mode lockdown, landscape orientation enforcement, error reporting, and configurable feature flags.
+          </li>
+          <li>
+            Migrated the backend server in parallel from Meteor to Electron + Express to reduce legacy coupling and make APIs easier to evolve.
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Architecture & Tech Decisions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Flutter Kiosk App</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>
+                BLoC for predictable state machines across multi-step flows (scan -&gt; edit -&gt; pay -&gt; export).
+              </li>
+              <li>
+                AutoRoute for explicit, testable routing between kiosk screens.
+              </li>
+              <li>
+                GetIt DI to keep features modular and reduce wiring in UI layers.
+              </li>
+              <li>
+                Firebase Remote Config for feature flags and emergency control without redeploying.
+              </li>
+              <li>
+                Crashlytics + Analytics for crash-free monitoring and rollout confidence.
+              </li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-3">Backend Server (Electron + Express)</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>
+                Migrated away from Meteor to reduce framework constraints and simplify debugging and deployment.
+              </li>
+              <li>
+                Express provides clear REST boundaries that match kiosk transaction flows and are easier to version.
+              </li>
+              <li>
+                Electron packaging supports desktop-like distribution where needed, while keeping the runtime familiar (Node.js).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Outcome</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            Delivered a refreshed kiosk experience with a new UI/UX that better fits the product direction.
+          </li>
+          <li>
+            Reduced legacy dependency by refactoring both the kiosk client and the backend server in parallel.
+          </li>
+          <li>
+            Improved operational readiness with feature flags, observability, and safer update strategies.
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</Layout>
