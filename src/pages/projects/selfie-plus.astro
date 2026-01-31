@@ -2,6 +2,7 @@
 import Layout from "~/layouts/PageLayout.astro";
 import { Icon } from "astro-icon/components";
 import Header from "~/components/widgets/Header.astro";
+import selfiePlusImage from "~/assets/images/selfie-plus-app-1.png";
 
 const metadata = {
   title: "Selfie Plus - Membership Mobile App | Kev Portfolio",
@@ -116,7 +117,7 @@ const metadata = {
     <!-- Project Image -->
     <div class="mb-12">
       <img
-        src="https://file.notion.so/f/f/5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf/ce2dfc37-3283-48ec-90a5-c542a08de8d9/image.png?table=block&id=2897b439-6e74-8003-b1d5-fbe8bf3beaa7&spaceId=5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf&expirationTimestamp=1760184000000&signature=cKp4vW3uLxFBi6-MPt5EqG2G1lDxW5KjRLxLbFx_594&downloadName=image.png"
+        src={selfiePlusImage.src}
         alt="Selfie Plus App Screenshot"
         class="w-full h-auto object-contain rounded-lg shadow-lg"
       />

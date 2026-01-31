@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a17" />
+      <stop offset="0.55" stop-color="#08312b" />
+      <stop offset="1" stop-color="#071b2e" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.10" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2cf3b0" />
+      <stop offset="1" stop-color="#32a8ff" />
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0" result="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <style>
+      .title { font: 700 44px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #eafff7; }
+      .sub { font: 400 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,255,247,0.78); }
+      .nodeTitle { font: 700 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,255,247,0.95); }
+      .nodeBody { font: 400 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,255,247,0.78); }
+      .chip { font: 600 13px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(255,255,255,0.9); }
+      .label { font: 600 12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: rgba(234,255,247,0.82); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <g opacity="0.18">
+    <circle cx="1030" cy="160" r="170" fill="#32a8ff" />
+    <circle cx="210" cy="520" r="220" fill="#2cf3b0" />
+    <circle cx="980" cy="540" r="210" fill="#19ffcf" />
+  </g>
+
+  <g filter="url(#soft)">
+    <text x="72" y="92" class="title">LiveIt Platform</text>
+    <text x="72" y="124" class="sub">NestJS backend + mobile/web clients with caching, rate limiting, and structured data boundaries</text>
+    <rect x="72" y="142" width="430" height="6" rx="3" fill="url(#accent)" opacity="0.9" />
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#soft)">
+    <rect x="72" y="190" width="300" height="146" rx="18" fill="url(#glass)" stroke="rgba(255,255,255,0.18)" />
+    <text x="96" y="228" class="nodeTitle">Mobile App</text>
+    <text x="96" y="254" class="nodeBody">Flutter client</text>
+    <text x="96" y="274" class="nodeBody">Auth, habits, content</text>
+    <text x="96" y="294" class="nodeBody">Offline cache (Hive)</text>
+    <rect x="96" y="306" width="108" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="110" y="324" class="chip">Flutter</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="72" y="362" width="300" height="146" rx="18" fill="url(#glass)" stroke="rgba(255,255,255,0.18)" />
+    <text x="96" y="400" class="nodeTitle">Web App</text>
+    <text x="96" y="426" class="nodeBody">SvelteKit UI</text>
+    <text x="96" y="446" class="nodeBody">Admin/content surfaces</text>
+    <text x="96" y="466" class="nodeBody">SSR-friendly endpoints</text>
+    <rect x="96" y="478" width="120" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="110" y="496" class="chip">SvelteKit</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="408" y="250" width="420" height="210" rx="22" fill="url(#glass)" stroke="rgba(255,255,255,0.18)" />
+    <text x="432" y="292" class="nodeTitle">API Server</text>
+    <text x="432" y="318" class="nodeBody">NestJS v11 (JWT auth, profiles, habits, devotionals)</text>
+    <text x="432" y="340" class="nodeBody">Throttler rate limit + cache layer + typed DTOs</text>
+    <text x="432" y="362" class="nodeBody">Health-ready and production oriented</text>
+    <rect x="432" y="388" width="124" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="446" y="406" class="chip">NestJS</text>
+    <rect x="564" y="388" width="92" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="578" y="406" class="chip">JWT</text>
+    <rect x="664" y="388" width="92" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="678" y="406" class="chip">REST</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="864" y="220" width="264" height="140" rx="18" fill="url(#glass)" stroke="rgba(255,255,255,0.18)" />
+    <text x="888" y="258" class="nodeTitle">PostgreSQL</text>
+    <text x="888" y="284" class="nodeBody">Prisma ORM</text>
+    <text x="888" y="304" class="nodeBody">Core relational data</text>
+    <rect x="888" y="316" width="108" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="902" y="334" class="chip">Prisma</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="864" y="390" width="264" height="140" rx="18" fill="url(#glass)" stroke="rgba(255,255,255,0.18)" />
+    <text x="888" y="428" class="nodeTitle">Redis Cache</text>
+    <text x="888" y="454" class="nodeBody">Fast hot paths</text>
+    <text x="888" y="474" class="nodeBody">Rate-limit state</text>
+    <rect x="888" y="486" width="92" height="26" rx="13" fill="rgba(255,255,255,0.14)" />
+    <text x="902" y="504" class="chip">Redis</text>
+  </g>
+
+  <!-- Connectors -->
+  <g opacity="0.85" stroke="rgba(234,255,247,0.65)" stroke-width="2" fill="none">
+    <path d="M372 262 C 392 262, 398 262, 408 300" />
+    <path d="M372 435 C 392 435, 398 435, 408 402" />
+    <path d="M828 330 C 846 316, 850 306, 864 292" />
+    <path d="M828 380 C 846 392, 850 402, 864 460" />
+  </g>
+
+  <g opacity="0.95">
+    <text x="392" y="226" class="label">Clients</text>
+    <text x="566" y="236" class="label">Backend</text>
+    <text x="888" y="196" class="label">Data + Cache</text>
+  </g>
+
+  <text x="72" y="606" class="sub">A practical fullstack setup: clean boundaries, caching, and production concerns baked in.</text>
+</svg>
