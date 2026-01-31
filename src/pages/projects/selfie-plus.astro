@@ -6,7 +6,7 @@ import Header from "~/components/widgets/Header.astro";
 const metadata = {
   title: "Selfie Plus - Membership Mobile App | Kev Portfolio",
   description:
-    "React Native mobile app for Selfie Time loyalty program with features like Share to Instagram Stories, QR code scanning, and geolocation integration.",
+    "Membership + loyalty app for Selfie Time: auth, points, vouchers, transactions, queue monitoring, content feed, and Instagram Stories sharing. Built with React Native 0.79.6 (React 19), TanStack Query, Redux Toolkit, NativeWind, Firebase, and Notifee.",
 };
 ---
 
@@ -25,7 +25,7 @@ const metadata = {
       actions={[
         {
           text: "Hire me",
-          href: "#",
+          href: "/contact",
         },
       ]}
       isSticky
@@ -62,7 +62,9 @@ const metadata = {
           <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
             My Role
           </h3>
-          <p class="text-gray-600 dark:text-gray-300">Fullstack Developer</p>
+          <p class="text-gray-600 dark:text-gray-300">
+            Mobile App Owner (React Native)
+          </p>
         </div>
         <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
           <h3 class="font-semibold text-gray-900 dark:text-white mb-2">
@@ -75,7 +77,9 @@ const metadata = {
             Tech Stack
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            React Native, Tanstack Query, Redux Toolkit, NativeWind
+            React Native 0.79.6 (React 19), TypeScript, TanStack Query v5,
+            Redux Toolkit + Persist, NativeWind, Firebase (FCM + Crashlytics),
+            Notifee
           </p>
         </div>
         <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -83,8 +87,9 @@ const metadata = {
             Key Features
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Membership, Share to Stories, QR Code, Geolocation, Queueing,
-            Notifications, Product Page, Video Player
+            Auth + onboarding, points wallet, voucher marketplace + QR redemption,
+            transaction gallery (download + share), queue monitoring, push + local
+            notifications, feeds (news/IG/blog/YT), product catalog
           </p>
         </div>
       </div>
@@ -123,114 +128,174 @@ const metadata = {
       <section class="mb-12">
         <h2 class="text-2xl md:text-3xl font-bold mb-6">Project Overview</h2>
         <p>
-          Selfie Plus is a React Native mobile application developed for Selfie
-          Time's loyalty program. The app enables users to collect points,
-          redeem vouchers, and interact with partner outlets. As a fullstack
-          developer at PT Intinya Technologi, I've been responsible for
-          implementing key features, upgrading the app's framework, and ensuring
-          optimal performance across both Android and iOS platforms.
+          Selfie Plus is a membership and loyalty mobile app for Selfie Time.
+          It connects real-world outlet activity (transactions, queueing, photo
+          delivery) with loyalty mechanics (points and vouchers) and engagement
+          loops (feeds, reminders, and limited-time mini games).
         </p>
         <p>
-          I am currently leading a full design refresh across all screens
-          (typography, colors, layout, and assets). This overhaul is 95%
-          complete and under R&D review; we are awaiting feedback and revisions
-          prior to release.
+          The app is built with React Native 0.79.6 + React 19 and ships to both
+          Android and iOS. Data fetching uses TanStack Query (v5) on top of an
+          Axios client with auth handling; global app state uses Redux Toolkit
+          with persisted user session.
         </p>
+        <p>
+          At PT Intinya Technologi, I own the Selfie Time mobile application end
+          to end: product delivery, architecture decisions, release readiness,
+          and critical feature implementation.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          Business Flows (End-to-End)
+        </h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            Authentication & onboarding: email/password login, social login
+            (Google; Apple on iOS; Facebook flow exists), OTP/email verification,
+            then profile completion gating (e.g., DOB) before entering the main
+            app.
+          </li>
+          <li>
+            Loyalty wallet: users have a points balance; balance refresh is
+            integrated into user/profile workflows.
+          </li>
+          <li>
+            Voucher marketplace: browse redeemable vouchers (infinite list), view
+            detail, and redeem with points; users then manage "My Vouchers" and
+            redeem in-store using QR.
+          </li>
+          <li>
+            Transactions: transaction history and detail, including paid items,
+            status, and a photo/video gallery delivered from sessions.
+          </li>
+          <li>
+            Queueing: users with active sessions receive live queue status
+            polling; the app surfaces an always-on queue monitor when your turn
+            is close.
+          </li>
+          <li>
+            Engagement: news feed, Instagram feed, blog, YouTube viewer, plus a
+            seasonal mini-game (THR Catcher) that can grant bonus points with a
+            server-side daily claim limit.
+          </li>
+        </ul>
       </section>
 
       <!-- Key Features -->
       <section class="mb-12">
         <h2 class="text-2xl md:text-3xl font-bold mb-6">Key Features</h2>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-4">
-              Share to Instagram Stories
-            </h3>
+            <h3 class="text-xl font-semibold mb-4">Vouchers + QR Redemption</h3>
             <p>
-              Implemented an end-to-end solution for sharing photos to Instagram
-              Stories with brand frames. The feature handles photo composition,
-              proper scaling, and platform-specific sharing mechanisms for both
-              Android and iOS. The solution ensures photos aren't cropped by
-              frame edges and maintains high-quality output at 1080x1920
-              resolution.
+              Users can redeem vouchers with points, then present a QR code in
+              outlet for redemption. Voucher detail supports rules and
+              restrictions (valid dates, outlet/product/day constraints) and
+              gracefully handles expired/used states.
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">Transaction Gallery</h3>
+            <p>
+              Transaction detail aggregates session metadata and gallery items
+              (photos + videos). Users can preview, download to device, and open
+              a web-based "unlock photos" flow when needed.
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">Queue Monitoring</h3>
+            <p>
+              The app polls queue status (per-user, per-outlet session) and shows
+              a floating, dismissible monitor when the turn is near; it triggers
+              haptics/vibration when the order becomes 1.
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">Share to Instagram Stories</h3>
+            <p>
+              From the gallery, users can share an image to Instagram Stories.
+              The flow downloads the remote image, composes a branded 1080x1920
+              story image with a frame, then launches Instagram Stories sharing
+              with platform-specific handling and cleanup.
             </p>
           </div>
 
           <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-4">
-              Loyalty Program Management
-            </h3>
+            <h3 class="text-xl font-semibold mb-4">THR Catcher Mini-Game</h3>
             <p>
-              Built a comprehensive system for points tracking, badge
-              achievements, and reward redemption. Users can view their point
-              history, current status, and available rewards in a user-friendly
-              interface. The system integrates with backend services to ensure
-              real-time data synchronization.
+              A seasonal, gamified campaign: users play a 3-level catching game
+              and can claim a points reward upon completion. The claim flow is
+              enforced server-side (max 1 reward per day) while the client
+              handles the game loop, UI, and reward submission.
             </p>
           </div>
 
           <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-4">
-              Geolocation & Outlet Discovery
-            </h3>
+            <h3 class="text-xl font-semibold mb-4">Content Feeds</h3>
             <p>
-              Developed a "Near Me" feature that helps users discover partner
-              outlets in their vicinity. The implementation uses efficient
-              geolocation services with optimized battery usage and integrates
-              with mapping services for directions.
-            </p>
-          </div>
-
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-4">QR Code Transactions</h3>
-            <p>
-              Created a secure QR code scanning system for in-store transactions
-              and voucher validation. The implementation includes camera access
-              optimization, fast QR detection, and secure transaction processing
-              with backend validation.
+              In-app content distribution surfaces updates via news feed,
+              Instagram feed, blog detail, and YouTube viewer screens to keep
+              members engaged between visits.
             </p>
           </div>
         </div>
       </section>
 
-            <!-- Ongoing Design Improvements -->
       <section class="mb-12">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">Ongoing Design & Feature Expansion</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          Architecture (How It Works)
+        </h2>
         <p>
-          Partnering with the R&D team, I own the ongoing UI/UX refresh,
-          covering updated design systems, assets, and in-app flows. The latest
-          redesign is 95% complete and in review, touching every screen with
-          new typography, color tokens, spacing, and motion while we incorporate
-          final feedback.
+          The app uses React Navigation (native stack + bottom tabs) with deep
+          linking (custom scheme) for notifications and marketing links. Most
+          server communication goes through a single Axios client that injects a
+          bearer token and triggers a safe logout on 401/Unauthenticated.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Design Ownership</h3>
-            <p>
-              I deliver end-to-end visual updates: refreshed components, imagery,
-              and tighter layout behavior so the mobile experience aligns with the
-              evolving brand direction.
-            </p>
-          </div>
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Feature Enhancements</h3>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Queueing system for Selfie Time members awaiting booth sessions</li>
-              <li>Re-architected notifications for more reliable, contextual delivery</li>
-              <li>Product catalog pages surfacing current packages and add-ons</li>
-              <li>Embedded video players streaming from Instagram and YouTube</li>
-            </ul>
-          </div>
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg md:col-span-2">
-            <h3 class="text-xl font-semibold mb-3">Cross-Platform Polish</h3>
-            <p>
-              Even with a shared React Native codebase, every delivery needs
-              Android and iOS tuning. I adapt navigation flows, interactions, and
-              native bridges so both platforms feel bespoke and perform optimally.
-            </p>
-          </div>
-        </div>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            State: Redux Toolkit for app/global state; Redux Persist keeps the
+            authenticated user session across restarts.
+          </li>
+          <li>
+            Data: TanStack Query v5 for queries, infinite lists, and mutations;
+            sensible defaults (retry + caching) configured at app root.
+          </li>
+          <li>
+            Networking: Axios client under `/api` with auth header injection and
+            centralized 401 handling.
+          </li>
+          <li>
+            UI: NativeWind (Tailwind for React Native) plus reusable UI
+            primitives (buttons, inputs, modals) and custom tab bar.
+          </li>
+          <li>
+            Reliability: Error boundary + global error handler with Firebase
+            Crashlytics (production) for crash capture.
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          Notifications & Deep Linking
+        </h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            Push notifications: Firebase Cloud Messaging; foreground and
+            background handlers display notifications via Notifee.
+          </li>
+          <li>
+            Local notifications: scheduled voucher expiry reminders (1, 7, 14
+            days before expiration) using timestamp triggers.
+          </li>
+          <li>
+            Deep links: notification payloads can include a `link` field; when
+            pressed, the app opens the deep link and routes the user to the
+            correct screen.
+          </li>
+        </ul>
       </section>
 
       <!-- Technical Challenges -->
@@ -242,45 +307,52 @@ const metadata = {
         <div class="space-y-8">
           <div>
             <h3 class="text-xl font-semibold mb-3">
-              React Native Framework Upgrade
+              React Native Upgrade + 16KB Page Size Compliance
             </h3>
             <p>
-              Led the upgrade process from an older React Native version to
-              0.79.6 with React 19. This involved:
+              Migrated the app across multiple major React Native versions to
+              React Native 0.79.6 + React 19, modernizing Android build tooling
+              for upcoming Play Store 16KB page size requirements.
             </p>
             <ul class="list-disc pl-6 mt-2">
               <li>
-                Updating Gradle configurations to support AGP 8.6.0 and JDK 17
+                Android: AGP 8.6, JDK 17, SDK 35, NDK 27.x, Hermes
               </li>
               <li>
-                Adapting native modules for compatibility with the new version
+                Enabled New Architecture (TurboModules + Fabric) and Bridgeless
+                mode
               </li>
               <li>Implementing support for Android 16KB page sizes</li>
-              <li>Migrating to bridgeless mode for improved performance</li>
+              <li>
+                Used patch-package to keep critical third-party libraries working
+                during upgrades
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 class="text-xl font-semibold mb-3">
-              Instagram Stories Integration
+              Instagram Stories Sharing (Anti-Crop + Cross-Platform)
             </h3>
-            <p>Solved complex challenges in the Share to Stories feature:</p>
+            <p>
+              Built a deterministic share pipeline for Instagram Stories that is
+              reliable on both platforms.
+            </p>
             <ul class="list-disc pl-6 mt-2">
               <li>
-                Implemented anti-crop strategies using "contain" fit with safe
-                scaling margins
+                Downloads remote images to local cache first for stable
+                processing
               </li>
               <li>
-                Created a composition system with proper layering (photo → frame
-                → watermark)
+                Composes a branded story image at 1080x1920 using ViewShot and
+                tuned transforms (scale/rotate) to avoid unwanted cropping
               </li>
               <li>
-                Built platform-specific sharing mechanisms using content URIs
-                for Android and pasteboard/URL schemes for iOS
+                Uses Instagram Stories share integration with platform-specific
+                behaviors (Android FileProvider/content URIs; iOS scheme checks)
               </li>
               <li>
-                Optimized file management with automatic cleanup to prevent
-                storage bloat
+                Cleans up temporary files after share to avoid cache bloat
               </li>
             </ul>
           </div>
@@ -290,18 +362,19 @@ const metadata = {
             <p>Enhanced app performance through:</p>
             <ul class="list-disc pl-6 mt-2">
               <li>
-                Implementing custom image processing with Skia for efficient
-                rendering
+                Efficient image loading/caching and thumbnail handling for media
+                heavy screens
               </li>
               <li>
-                Optimizing render cycles to maintain smooth UI interactions
+                Stabilizing navigation and background handlers to reduce UI jank
               </li>
               <li>
-                Using lightweight on-screen rendering with high-resolution
-                exports for sharing features
+                Using TanStack Query caching + infinite queries for long lists
+                (vouchers, transactions)
               </li>
               <li>
-                Implementing proper memory management for image processing tasks
+                Avoiding repeated side effects with explicit "run once" guards
+                for profile fetch and push token registration
               </li>
             </ul>
           </div>
@@ -338,20 +411,20 @@ const metadata = {
         </p>
         <ul class="list-disc pl-6 mt-4">
           <li>
-            Successfully upgraded to React Native 0.79.6 with improved stability
-            and performance
+            Modernized React Native stack (0.79.6 + React 19) and Android build
+            toolchain to meet upcoming platform requirements
           </li>
           <li>
-            Implemented the Share to Stories feature with high user adoption,
-            increasing brand visibility
+            Shipped media-heavy transaction gallery flows (images + videos) with
+            download and sharing capabilities
           </li>
           <li>
-            Enhanced user experience with smooth UI interactions and optimized
-            image processing
+            Improved engagement loops with notifications, feed content, and
+            queue monitoring
           </li>
           <li>
-            Improved code maintainability through TypeScript implementation and
-            modular architecture
+            Increased maintainability via typed hooks, centralized networking,
+            and consistent state/data boundaries
           </li>
           <li>
             Created a platform-ready application compliant with the latest
@@ -367,24 +440,24 @@ const metadata = {
         </h2>
         <ul class="list-disc pl-6">
           <li>
-            Designed and implemented the end-to-end Share to Stories feature
-            with anti-crop strategies and platform-specific integrations
+            Delivered the end-to-end Instagram Stories sharing pipeline
+            (download -> compose -> share -> cleanup)
           </li>
           <li>
-            Led the React Native framework upgrade process from legacy version
-            to 0.79.6
+            Led major framework/tooling upgrades (React Native 0.79.6, New
+            Architecture, Bridgeless mode, Android build modernization)
           </li>
           <li>
-            Implemented Android 16KB page sizes support and adapted to
-            bridgeless mode
+            Implemented 16KB page size readiness work and coordinated related
+            dependency migrations
           </li>
           <li>
-            Migrated critical components from JavaScript to TypeScript for
-            improved type safety
+            Migrated/typed key flows and hooks to improve type safety and reduce
+            runtime errors
           </li>
           <li>
-            Optimized image processing performance using custom rendering
-            techniques
+            Improved reliability of push + local notifications (FCM + Notifee)
+            including deep link handling
           </li>
           <li>
             Created reusable components and custom hooks for common

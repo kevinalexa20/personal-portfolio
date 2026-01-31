@@ -32,7 +32,7 @@ const metadata = {
       actions={[
         {
           text: "Hire me",
-          href: "#",
+          href: getPermalink('/contact#form'),
         },
       ]}
       isSticky
@@ -335,7 +335,7 @@ const metadata = {
       {
         title: 'Tech Stack:',
         description:
-          'NestJS, Prisma ORM (PostgreSQL), Redis cache, Throttler, Appwrite SDK, Jest for testing, Docker for deployment.',
+          'Flutter, BloC, Dio, Hive, Sveltekit, NestJS, Prisma ORM (PostgreSQL), Redis cache, Throttler, Appwrite SDK, Jest for testing, Docker for deployment.',
       },
     ]}
     image={{
@@ -353,7 +353,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 5: <br /><span class="text-2xl">LiveIt Server — Backend API</span>
+        Project 2: <br /><span class="text-2xl">LiveIt Platform: Fullstack Web & Mobile apps</span>
       </h3>
     </Fragment>
 
@@ -368,19 +368,17 @@ const metadata = {
       {
         title: 'Description:',
         description:
-          'Developed a hyperlocal mobile application designed to combat food waste and support culinary UMKM. The app connects merchants with surplus food to nearby consumers, featuring a location-based discovery system that sorts available meals by proximity. Users can view detailed information about the food and the seller, and directly contact them to arrange a purchase.',
+          'A Flutter-based hyperlocal mobile app designed to combat food waste and support culinary UMKM. Connects merchants with surplus food to nearby consumers with location-based discovery and direct contact flows.',
       },
       {
         title: "Tech Stack:",
         description:
-          "Built with React Native 0.79.6, Redux Toolkit with RTK Query for state management, NativeWind (Tailwind CSS for React Native) for styling, and custom image processing with Skia.",
+          'Flutter, Dart, Riverpod, Appwrite (Auth/DB/Storage), geolocator, go_router.',
       },
     ]}
     image={{
-      src: "https://file.notion.so/f/f/5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf/ce2dfc37-3283-48ec-90a5-c542a08de8d9/image.png?table=block&id=2897b439-6e74-8003-b1d5-fbe8bf3beaa7&spaceId=5d7fdf83-5e4e-4a86-93ad-6ab8a7663dbf&expirationTimestamp=1760184000000&signature=cKp4vW3uLxFBi6-MPt5EqG2G1lDxW5KjRLxLbFx_594&downloadName=image.png",
-      alt: "Selfie Plus App Screenshot",
-      width: 1200,
-      height: 630,
+      src: 'https://syd.cloud.appwrite.io/v1/storage/buckets/6858a67c0019ab9fadca/files/6858a6ff0023ff6073ad/view?project=6852ba060004eb5f54fe&mode=admin',
+      alt: 'WarungHemat App Screenshot',
     }}
     callToAction={{
       target: '_blank',
@@ -391,44 +389,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">WarungHemat Mobile Apps</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: "Description:",
-        description:
-          "Developed a hyperlocal mobile application designed to combat food waste and support culinary UMKM. The app connects merchants with surplus food to nearby consumers, featuring a location-based discovery system that sorts available meals by proximity. Users can view detailed information about the food and the seller, and directly contact them to arrange a purchase.",
-      },
-      {
-        title: "Tech Stack:",
-        description:
-          "Built with Flutter and Dart for cross-platform development. It uses Riverpod for state management and Appwrite as the Backend-as-a-Service (BaaS) for handling the database, authentication, and storage. The core geo-location feature is implemented client-side using the geolocator package.",
-      },
-    ]}
-    image={{
-      src: "https://syd.cloud.appwrite.io/v1/storage/buckets/6858a67c0019ab9fadca/files/6858a6ff0023ff6073ad/view?project=6852ba060004eb5f54fe&mode=admin",
-      alt: "WH-app screenshot",
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '/projects/elkkana',
-    }}
-  >
-    <Fragment slot="content">
-      <h3
-        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">WarungHemat Mobile Apps</span>
+        Project 3: <br /><span class="text-2xl">WarungHemat Mobile App</span>
       </h3>
     </Fragment>
 
@@ -464,89 +425,8 @@ const metadata = {
     <Fragment slot="content">
       <h3
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl"
-          >Ship Crewing Agency Platform</span
-        >
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: "Description:",
-        description:
-          "Developed a comprehensive e-learning platform with user authentication, course management, video lessons, quizzes, and progress tracking. The platform includes both student and instructor interfaces with real-time analytics.",
-      },
-      {
-        title: "Tech Stack:",
-        description: `Frontend built with React.js, Tailwind CSS, and shadcn components. Backend implemented with Node.js, Express.js, and Prisma ORM. Data stored in PostgreSQL database with Supabase integration for authentication and storage services.`,
-      },
-    ]}
-    image={{
-      src: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      alt: "E-Learning Platform",
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3
-        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl"
-          >Full-Stack E-Learning Platform</span
-        >
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: "Description:",
-        description: `Created a cross-platform mobile application that calculates shipping costs across multiple Indonesian delivery services. The app compares rates, delivery times, and service options to help users find the most cost-effective shipping solution.`,
-      },
-      {
-        title: "Tech Stack:",
-        description: `Developed with Flutter and Dart for cross-platform compatibility. Implemented RESTful API integration with Indonesian shipping companies. Features include location services, package dimension calculator, and favorite routes saving functionality.`,
-      },
-    ]}
-    image={{
-      src: '',
-      alt: 'Shipping Calculator App',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'View Project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3
-        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Project 4: <br /><span class="text-2xl"
-          >Indonesian Shipping Calculator App</span
+          >Ship Crewing Agency Platform</span
         >
       </h3>
     </Fragment>
